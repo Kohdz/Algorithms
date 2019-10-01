@@ -10,12 +10,12 @@
 
 # recursively converting from integer to string
 #how does this problem remember the previous values
-# def toStr(n, base):
-#     convertString = "0123456789ABCDEF"
-#     if n < base:
-#         return convertString[n]
-#     else: 
-#         return toStr(n / base, base) + convertString[n%base]
+def toStr(n, base):
+    convertString = "0123456789ABCDEF"
+    if n < base:
+        return convertString[n]
+    else: 
+        return toStr(n / base, base) + convertString[n%base]
 
 
 
@@ -64,3 +64,31 @@ def isPal(pal):
 
 print(isPal(pal1))
 
+
+#converting an integer to a string using a stack
+def toStr(n, base):
+    convertString = "0123456789ABCDEF"
+    while n > 0:
+        if n < base: 
+            stack.push(convertString[n])
+        else:
+            stack.push(convertString[n % base])
+        n = n // base
+    res = ""
+    while not stack.isEmpty():
+        res = res + str(rStack.pop())
+    return res
+    
+
+def recMC(coinValueList, change):
+    minCoins = change
+    if  change in coinValueList:
+        return 1
+    else:
+        for i in [c for c in coinValueList if c <= change]:
+            numCoins = 1 + recMC(coinValueList, change - i)
+            if numCoins < minCoins:
+                minCoins = minCoins
+    return minCoins
+
+print(recMC([1, 5, 10, 25], 63))
