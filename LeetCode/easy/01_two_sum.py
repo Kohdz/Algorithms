@@ -7,18 +7,18 @@
 #     return [0, 1]
 
 
-# def twoSum(num, target):
+def twoSum(num, target):
 
-#     fin_list = []
-#     counter = 1
-#     for i in range(len(nums)):
-#         for j in range(len(nums)):
-#             if num[i] + num[j] == target:
-#                 if i & j not in fin_list:
-#                     fin_list.append(i)
-#                     fin_list.append(j)
+    fin_list = []
+    counter = 1
+    for i in range(len(nums)):
+        for j in range(len(nums)):
+            if num[i] + num[j] == target:
+                if i & j not in fin_list:
+                    fin_list.append(i)
+                    fin_list.append(j)
 
-#     return fin_list
+    return fin_list
 
 nums = [2, 7, 11, 15]
 target = 9
@@ -35,7 +35,7 @@ def twoSumHer(nums, target):
 
 print(twoSumHer(nums, target))
 
-def toSumHerv2(nums, target):
+def toSum2(nums, target):
     dict = {}
     for i in range(len(nums)):
         if target - nums[i] not in dict:

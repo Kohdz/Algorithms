@@ -76,7 +76,7 @@ def reverseHer(x):
     # return the absolute value of a number
     a = abs(x)
 
-    while(a! = 0):
+    while(a! = 0)
         # 123 
         # a = 123
         # num = 0
