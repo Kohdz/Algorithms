@@ -26,7 +26,6 @@ def isPalindrome(num):
     while num_abs > 0:
         mod = num_abs % 10
         num_abs = num_abs // 10
-        d.FrontAdd(mod)
         num_list.append(mod)
 
     num_list_rev = num_list[::-1]
