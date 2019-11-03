@@ -30,8 +30,6 @@
 #     Explanation: M = 1000 CM = 900, XC = 90 and IV = 4
 
 
-
-
 def romanInt(sym):
     dict = {
         "I": 1,
@@ -44,7 +42,6 @@ def romanInt(sym):
     }
     counter = 0
 
-
     t = [char for char in sym]
     print(t)
     index = 0
@@ -54,14 +51,45 @@ def romanInt(sym):
                 counter += dict[i] - dict["I"]
             elif i == "X" and t[index] == "L" or "C":
                 counter += dict[i] - dict["X"]
-            elif i == "C" and t[index] == "L" or "C":      
-                counter +- dict[i] - dict["C"]
+            elif i == "C" and t[index] == "L" or "C":
+                counter + - dict[i] - dict["C"]
         else:
             counter += dict[i]
         index += 1
 
-    
     return counter
 
-sym = "III"
-print(romanInt(sym))
+# sym = "III"
+# print(romanInt(sym))
+
+
+def RomanToInt(s):
+    numeral_map = {
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000
+    }
+
+    result = 0
+
+    for i in range(len(s)):
+        if i > 0 and numeral_map[s[i]] > numeral_map[s[i-1]]:
+            result += numeral_map[s[i]] - 2 * numeral_map[s[i-1]]
+        else:
+            result += numeral_map[s[i]]
+
+    return result
+    # result = M + C
+    # temp = M - C
+    # result = += M - C
+    # result = M + C + temp = M + C + M - C - M + M
+    # excected result = M + (M - C)
+
+
+sym = "MCMXCIV"
+# output = 1994
+print(RomanToInt(sym))

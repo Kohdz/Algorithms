@@ -5,12 +5,13 @@
 # Example:
 #     Input: 123
 #     Output: 321
-    
+
 #     Input: -123
 #     Output-321
-    
+
 #     Input: 120
 #     Output: 21
+
 
 class Stack:
     def __init__(self):
@@ -30,7 +31,6 @@ class Stack:
 
     def size(self):
         return len(self.items)
-         
 
 
 def reverse(x):
@@ -38,32 +38,29 @@ def reverse(x):
     s_sign = Stack()
 
     rev = ''
-    
+
     if x < 0:
         s_sign.push('-')
         x = x * -1
 
-    while x >  0:
+    while x > 0:
         mod = x % 10
         rev = rev + str(mod)
         x = x // 10
 
-    
     lead_zero = False
     while not lead_zero:
-        
-        if rev[0]== '0':
+
+        if rev[0] == '0':
             rev = rev[1:]
         else:
             lead_zero = True
-
 
     return(rev)
 
     if not s_sign.isEmpty():
         rev = str(s_sign.pop()) + rev
 
-  
 
 x = 1200
 print(reverse(x))
@@ -76,16 +73,16 @@ def reverseHer(x):
     # return the absolute value of a number
     a = abs(x)
 
-    while(a! = 0)
-        # 123 
+    while(a != 0):
+        # 123
         # a = 123
         # num = 0
-        
-        #first iteration
+
+        # first iteration
         # a = 12
         # num = 0
 
-        #second iteration
+        # second iteration
         # a = 1
         # num = 32
 
@@ -99,9 +96,7 @@ def reverseHer(x):
 
     if x > 0 and num < 214784648:
         return num
-    elif x < 0 and num <= 214784648
+    elif x < 0 and num <= 214784648:
         return -num
     else:
         return 0
-
-

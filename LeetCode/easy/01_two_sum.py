@@ -20,9 +20,11 @@ def twoSum(num, target):
 
     return fin_list
 
+
 nums = [2, 7, 11, 15]
 target = 9
 # print(twoSum(nums, target))
+
 
 def twoSumHer(nums, target):
     for i in nums:
@@ -33,18 +35,16 @@ def twoSumHer(nums, target):
         if j in temp_nums:
             return(nums.index(i), next_index + temp_nums.index(j))
 
-print(twoSumHer(nums, target))
+
+# print(twoSumHer(nums, target))
+
 
 def toSum2(nums, target):
     dict = {}
     for i in range(len(nums)):
         if target - nums[i] not in dict:
             print("dict: ", dict)
-            dict[nums[i]] = i 
+            dict[nums[i]] = i
             print("dict: ", dict)
         else:
             return [dict[target-nums[i]], i]
-
-print(toSumHerv2(nums, target))
-
-

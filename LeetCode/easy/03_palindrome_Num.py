@@ -8,17 +8,18 @@
 # example 2:
 #     Input: -121
 #     Output: False
- 
+
 num1 = 121
 num2 = -121
 num3 = 199
- 
+
+
 def isPalindrome(num):
     if num < 0:
         return False
     num_abs = abs(num)
     print(num_abs)
-    d = Dequeue()
+    # d = Dequeue()
 
     isPal = False
 
@@ -35,7 +36,9 @@ def isPalindrome(num):
 
     return isPal
 
+
 print(isPalindrome(num1))
+
 
 def isPalindromeHER(x):
     num = 0
@@ -50,5 +53,3 @@ def isPalindromeHER(x):
         return True
     else:
         return False
-
-
