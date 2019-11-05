@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 # Given a sorted array nums, remove the duplicates in-place such that each element appear only once and
 #  return the new length.
 
@@ -31,17 +32,43 @@
 
 def removeDuplicates(nums):
     dict = {}
-    index = 0
-    for num in nums:
-        if num not in dict:
-            dict[index] = nums
+    stack = []
+    for i in range(len(nums)):
+        if nums[i] not in dict:
+            dict[nums[i]] = i
         else:
-            del
+            stack.append(nums[i])
 
-        index += 1
-        print(nums)
+    while stack != []:
+        pop = stack.pop()
+        nums.remove(pop)
+
     return nums
 
 
 nums = [1, 1, 2]
-print(removeDuplicates(nums))
+nums2 = [0, 0, 1, 1, 1, 2, 2, 3, 3, 3, 4]
+nums3 = [2, 2, 2]
+
+# print(removeDuplicates(nums))
+# print(removeDuplicates(nums2))
+# print(removeDuplicates(nums3))
+
+
+def removeDuplicatesHer(nums):
+
+    if not nums:
+        return 0
+
+    count = 1
+    for i in range(len(nums)):
+        if nums[count] != nums[i]:
+            count += 1
+            nums[count] = nums[i]
+
+    return count
+
+
+print(removeDuplicatesHer(nums))
+print(removeDuplicatesHer(nums2))
+print(removeDuplicatesHer(nums3))
