@@ -6,5 +6,9 @@ def count_bits(x):
     return num_bits
 
 
-print(4 and 8)
-print(4 & 8)
+x = 12  # 1100
+print(count_bits(x))
+# 1100 & 0001 # 0
+# 0110 & 0001 # 0
+# 0011 & 0001 # 1
+# 0001 & 0001 # 1
