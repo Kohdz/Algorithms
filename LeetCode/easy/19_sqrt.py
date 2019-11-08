@@ -27,5 +27,21 @@ def mySqrt(x):
 
 x = 8
 # return 2
+# print(mySqrt(x))
 
-print(mySqrt(x))
+
+def sqrtHer(x):
+    if x < 2:
+        return x
+
+    left, right = 1,  x//2
+    while left <= right:
+        mid = left + (right-left) // 2
+        if mid > x/mid:
+            right = mid = -1
+        else:
+            left = mid + 1
+    return left - 1
+
+
+print(sqrtHer(x))
