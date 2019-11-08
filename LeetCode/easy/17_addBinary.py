@@ -14,20 +14,22 @@
 
 
 def addBinary(a, b):
-    result, carry, val = "", 0, 0
 
+    result, carry, val = "", 0, 0
     for i in range(max(len(a), len(b))):
         val = carry
         if i < len(a):
             val += int(a[-(i+1)])
         if i < len(b):
             val += int(b[-(i+1)])
-
-        carry, cal = val // 2, val % 2
+        carry, val = val // 2, val % 2
         result += str(val)
+    if carry:
+        result += str(1)
+    return result[::-1]
 
 
-a = '11'
-b = '1'
+a = "11"
+b = "1"
 # output 100
 print(addBinary(a, b))
