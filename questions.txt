@@ -1,0 +1,3 @@
+1. 19_sqrt.py
+    - how this algorithm work
+    - mathmatically

@@ -29,14 +29,23 @@ x = 8
 # return 2
 # print(mySqrt(x))
 
+# binary search method of finding the sqrt root
+# binary search if we recall, is O ( logn)
+# were subtracting -1 from the highest left most position
+# because even though we cancled 2 out, when we square 3,
+# because y2 = x or |x = y2;
+
 
 def sqrtHer(x):
+    #  if x = 0, sqrt of 0 is 0
+    # if x = 1, sqrt of 1 is 1
     if x < 2:
         return x
 
     left, right = 1,  x//2
     while left <= right:
         mid = left + (right-left) // 2
+        #  or we can use if mid * mid > x
         if mid > x/mid:
             right = mid = -1
         else:
