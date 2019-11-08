@@ -38,7 +38,7 @@ def plusOne(digits):
 arr1 = [9]  # expect [1,2,4]
 arr2 = [4, 3, 2, 1]  # expect [4,3,2,2]
 
-print(plusOne(arr1))
+# print(plusOne(arr1))
 
 
 def plusOneHer(digits):
@@ -52,3 +52,5 @@ def plusOneHer(digits):
     digits[0] = 1
     digits.append(0)
     return digits
+
+
