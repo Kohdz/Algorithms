@@ -6,3 +6,6 @@ def Factoral(n):
         return 1
     else:
         return n*Factoral(n-1)
+
+
+print(Factoral(8))
