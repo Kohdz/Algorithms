@@ -1,33 +1,58 @@
-# You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed,
-# the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it
-#  will automatically contact the police if two adjacent houses were broken into on the same night.
+# You are climbing a stair case. It takes n steps to reach to the top.
 
-# Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount
-#  of money you can rob tonight without alerting the police.
+# Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+# Note: Given n will be a positive integer.
 
 # Example 1:
-# Input: [1,2,3,1]
-# Output: 4
-# Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
-# Total amount you can rob = 1 + 3 = 4.
-
+# Input: 2
+# Output: 2
+# Explanation: There are two ways to climb to the top.
+# 1. 1 step + 1 step
+# 2. 2 steps
 
 # Example 2:
-# Input: [2,7,9,3,1]
-# Output: 12
-# Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).
-#              Total amount you can rob = 2 + 9 + 1 = 12.
+# Input: 3
+# Output: 3
+# Explanation: There are three ways to climb to the top.
+# 1. 1 step + 1 step + 1 step
+# 2. 1 step + 2 steps
+# 3. 2 steps + 1 step
 
-nums = 0
+#  1 step + 1 step + 1 step + 1 step
+# 1 step + 1 step + 2 step
+#  1 step + 2 step + 1step
+#  2 step + 1 step + 1step
+#
+#
+
+#  1 step + 1 step + 1 step + 1 step + 1step
+#  1 step + 1 step + 1 step + 2 step
+#  1 step + 1 step + 2 step + 1 step
+#  1 step + 2 step + 1 step + 1 step
+#  2 step + 1 step + 1 step + 1 step
 
 
-def rob(nums):
+def stairClimb(n):
 
-    last, now = 0, 0
+    prev, current = 0, 1
+    for i in range(n):
+        prev, current = current, prev + current
+    return current
 
-    for num in nums:
-        last, now = now, max(last + num, now)
+
+n = 6
+print(stairClimb(n))
 
 
-nums2 = [2, 1, 1, 2]
-print(rob(nums2))
+def climbStairs(self, n: int) -> int:
+    dp = [0]*(n + 1)
+    dp[0] = 1
+
+    for i in range(1, n + 1):
+        for num in [1, 2]:
+            if num > i:
+                break
+            dp[i] += dp[i - num]
+
+    return dp[-1]
