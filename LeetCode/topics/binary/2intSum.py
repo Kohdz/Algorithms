@@ -23,6 +23,14 @@ print(getSum(a, b))
 def _add(a, b):
     if b == 0:
         return a
+    print('a',a)
+    print('b',b)
     return _add(a ^ b, (a & b) << 1)
+    
+print(_add(a,b))
 
+
+# 01 10 11
+#  11 = 3
+# so ^ and & are bitwise operators; they are not compartive operators; they
 

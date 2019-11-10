@@ -8,3 +8,12 @@ def count_bits(x):
 
 print(4 and 8)
 print(4 & 8)
+
+
+# 1100 & 0001 # 0
+# 0110 & 0001 # 0
+# 0011 & 0001 # 1
+# 0001 & 0001 # 1
+# and correctly return 2. By right shifting, you count the bits from right to left until
+#  the last shift results in 0000 and breaks the loop
+
