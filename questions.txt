@@ -1,3 +1,5 @@
 1. when subtracting binary numbers, why do we replace the zero with 2
 2. Ask about ParityCache
-3. 
+3. How do i create a list for checking
+4. ask about itme complexity O (n/L)
+5.  Ask about 0xFFFF
