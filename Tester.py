@@ -1,32 +1,15 @@
-# Determine whether an integer is a palindrome. An integer is a palindrome when
-# it reads the same backwords as fordwards
-
-# example 1:
-#     Input: 121
-#     Output: True
-
-# example 2:
-#     Input: -121
-#     Output: False
+# Write a Python program to calculate the sum of a list of numbers
 
 
-def palNum(num):
-    a = abs(num)
-    pal = True
-    rev = 0
-
-    while a > 0:
-        temp = a % 10
-        rev = rev * 10 + temp
-        a = a // 10
-
-    print(rev)
-    if num != rev:
-        pal = False
-
-    return pal
+# Write a Python program to converting an Integer to a string in any base
 
 
-num1 = 121
+def to_string(num, base):
+    conver_tString = "0123456789ABCDEF"
+    if num < base:
+        return conver_tString[num]
+    else:
+        return to_string(num//base, base) + conver_tString[num % base]
 
-print(palNum(num1))
+
+print(to_string(2835, 16))
