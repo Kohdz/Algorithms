@@ -30,40 +30,6 @@
 #     Output 1994
 #     Explanation: M = 1000 CM = 900, XC = 90 and IV = 4
 
-
-def romanInt(sym):
-    dict = {
-        "I": 1,
-        "V": 5,
-        "X": 10,
-        "L": 50,
-        "C": 100,
-        "D": 500,
-        "M": 1000
-    }
-    counter = 0
-
-    t = [char for char in sym]
-    print(t)
-    index = 0
-    for i in t:
-        if i in dict:
-            if i == "I" and t[index] == 'V' or 'X':
-                counter += dict[i] - dict["I"]
-            elif i == "X" and t[index] == "L" or "C":
-                counter += dict[i] - dict["X"]
-            elif i == "C" and t[index] == "L" or "C":
-                counter + - dict[i] - dict["C"]
-        else:
-            counter += dict[i]
-        index += 1
-
-    return counter
-
-# sym = "III"
-# print(romanInt(sym))
-
-
 def RomanToInt(s):
     numeral_map = {
         "I": 1,

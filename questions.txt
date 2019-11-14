@@ -1,4 +1,5 @@
 1. when subtracting binary numbers, why do we replace the zero with 2
 4. ask about itme complexity O (n/L)
 6. converting any int to a base: try to look this up 
-7. Ask Questions About 29_balBinTree
+7. Ask Questions About 29_balBinTree: walkthrough
+8. Ask about 32_pathSum: how does root.left go root.right
