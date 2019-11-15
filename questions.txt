@@ -1,5 +1,8 @@
-1. when subtracting binary numbers, why do we replace the zero with 2
-4. ask about itme complexity O (n/L)
-6. converting any int to a base: try to look this up 
-7. Ask Questions About 29_balBinTree: walkthrough
-8. Ask about 32_pathSum: how does root.left go root.right
+1.  when subtracting binary numbers, why do we replace the zero with 2
+4.  ask about itme complexity O (n/L)
+6.  converting any int to a base: try to look this up 
+7.  Ask Questions About 29_balBinTree: walkthrough
+8.  Ask about 32_pathSum: how does root.left go root.right
+9.  Confused by using bitwise operations to do multiplication/division/powers
+10. How is 1.1^21 simplified by braking it down to 1.1*1.1^2 then doing 1.21 *10
+11. why do all of these bits stuff have a -1
