@@ -36,10 +36,14 @@ nums2 = [4, 1, 2, 1, 2]
 print(singleNumber(nums2))
 
 
-def singleNumber(nums):
+def singleNumberBit(nums):
 
     ans = 0
 
+    # when we XOR, we are changing 0 to that XOR
+    # but when we XOR again, meaning, if a number repreats
+    # then  its XOR will simply reverse it back to 0
+    #  the only time it will not repeat is if  there is only 1 value
     for num in nums:
         ans ^= num
 
@@ -52,7 +56,7 @@ def singleNumberHash(nums):
     for i in nums:
         try:
             hash_table.pop(i)
-        else:
+        except:
             hash_table[i] = 1
 
     return hash_table.popitem()[0]
