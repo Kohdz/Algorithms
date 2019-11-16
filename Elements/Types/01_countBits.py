@@ -18,6 +18,6 @@ def count_bits(x):
 #  the last shift results in 0000 and breaks the loop
 
 
-a = 12
-
-print(bin(a) ^= a >> 32)
+a = 15
+print(bin(a))
+print(count_bits(a))

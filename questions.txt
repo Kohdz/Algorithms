@@ -11,4 +11,4 @@
 14. ask about this line: count = sum(1 for elem in nums if elem == num)
 15.  40_majorityElement (sorting) understanding
 16. 40_majorityElement (binary search) complexity analysis
-17. 
+17. 42_rotateArray cyclic replacement? lookup?
