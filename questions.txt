@@ -6,3 +6,9 @@
 9.  Confused by using bitwise operations to do multiplication/division/powers
 10. How is 1.1^21 simplified by braking it down to 1.1*1.1^2 then doing 1.21 *10
 11. why do all of these bits stuff have a -1
+12. 10_isPalDecimal: why does math.floor(math.log10(x)) + 1 return number of digits
+13. 10_isPalDecimal: how does this equation work
+14. ask about this line: count = sum(1 for elem in nums if elem == num)
+15.  40_majorityElement (sorting) understanding
+16. 40_majorityElement (binary search) complexity analysis
+17. 
