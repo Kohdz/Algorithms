@@ -134,6 +134,9 @@ def majorityElementBoyer(nums):
     # Boyer-Moore perfomrs constant work exactly n time
     # so the algorithms run in linear time
 
+    # basically, if count is 0, initialize on the next candiate
+    #  else just subtract 1 if it is another canadiate
+    #  but add one if it is the same canidate
     count = 0
     candidate = None
 
