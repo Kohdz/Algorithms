@@ -31,6 +31,6 @@ def containsNearbyDuplicate(nums, k):
 
 nums = [99, 99]
 k = 2
-# true
+
 
 print(containsNearbyDuplicate(nums, k))
