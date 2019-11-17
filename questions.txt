@@ -13,3 +13,4 @@
 16. 40_majorityElement (binary search) complexity analysis
 17. 42_rotateArray cyclic replacement? lookup?
 18. 43_why are they using previous.next
+19. simulate tree input
