@@ -25,3 +25,12 @@ def addDigits(num):
 
 num = 38
 print(addDigits(num))
+
+
+def addDigitsHer(num):
+    if num <= 0:
+        return 0
+    else:
+        result = (num - 1) % 9 + 1
+
+    return result
