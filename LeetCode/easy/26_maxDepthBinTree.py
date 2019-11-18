@@ -19,9 +19,61 @@
 # return its depth = 3.
 
 
-def maxDepth(root):
+def BinaryTree(r):
+    	return [r, [], []]
 
-    if root is None:
+def insertLeft(root,newBranch):
+	t = root.pop(1)
+	if len(t) > 1:
+		root.insert(1,[newBranch,t,[]])
+	else:
+		root.insert(1,[newBranch, [], []])
+	return root
+
+def insertRight(root,newBranch):
+	t = root.pop(2)
+	if len(t) > 1:
+		root.insert(2,[newBranch,[],t])
+	else:
+		root.insert(2,[newBranch,[],[]])
+	return root
+
+def getRootVal(root):
+	return root[0]
+
+def setRootVal(root,newVal):
+	root[0] = newVal
+
+def getLeftChild(root):
+	return root[1]
+
+def getRightChild(root):
+	return root[2]
+
+#     3
+#    / \
+#   9  20
+#     /  \
+#    15   7
+
+
+
+
+b = BinaryTree('a')
+# Build up the left side of this tree
+insertLeft(b,'b')
+insertRight(getLeftChild(b),'d')
+
+# Build up the right side of this tree
+insertRight(b,'c')
+insertLeft(getRightChild(b),'e')
+insertRight(getRightChild(b),'f')
+
+print(getRightChild(b))
+def maxDepth(node):
+
+    if node is None:
         return 0
     else:
-        return max(maxDepth(root.left), maxDepth(root.right)) + 1
+        return max(maxDepth(node.left), maxDepth(node.right)) + 1
+
