@@ -14,3 +14,4 @@
 17. 42_rotateArray cyclic replacement? lookup?
 18. 43_why are they using previous.next
 19. simulate tree input
+20. modift an array without creating a copy
