@@ -45,7 +45,7 @@ def wordPattern(pattern, str):
                 return False
             hashmap[pattern[i]] = words[i]
             mapval[words[i]] = True
-        return True
+    return True
 
 
 pattern = "abba"
