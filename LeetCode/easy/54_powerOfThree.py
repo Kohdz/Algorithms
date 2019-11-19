@@ -50,7 +50,7 @@ def isPowerOfThreeBase(n):
 
     return 0
 
-
+# time Unknown | space O(1)
 def isPowerOfThreeMath(n):
     #  n is a power of 3 if and only if i  is an integer
     #  we check if a number is an integer by taking the decimal
@@ -58,5 +58,11 @@ def isPowerOfThreeMath(n):
         # n = 3*1
         # i = log3(n)
         #  i = logb(n)/logb(3)
+
+    return (math.log10(n) / math.log10(3) % 1 == 0)
+
+
+def isPowerOfThreeMathLimit(n):
+    
 
     return (math.log10(n) / math.log10(3) % 1 == 0)
