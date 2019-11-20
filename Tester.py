@@ -1,25 +1,13 @@
+y = [1, 2]
+x = []
+
+if y:
+    print(1)
+
+if x:
+    print(2)
 
 
-num = 27 % 26
-ordA = ord('A')
-combo = num + ordA
-chrcombo = chr(num + ordA)
-
-
-print("num: ", num)
-print("ordA: ", ordA)
-print("combo: ", combo)
-print("chrcombo: ", chrcombo)
-print("")
-
-num2 = 27 // 10
-num = num2 % 26
-ordA = ord('A')
-combo = num + ordA
-chrcombo = chr(num + ordA)
-
-print("num: ", num)
-print("ordA: ", ordA)
-print("combo: ", combo)
-print("chrcombo: ", chrcombo)
-print("")
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+squares = [x**2 for x in a if x % 2 == 0]
+print(squares)

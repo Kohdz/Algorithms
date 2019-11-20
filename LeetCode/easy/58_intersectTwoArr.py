@@ -17,10 +17,20 @@
 
 def intersection(num1, num2):
 
-    return 0
+    if len(nums1) < len(nums2):
+        itLen = len(nums1)
+    else:
+        itLen = len(nums2)
+
+    num3 = []
+    for i in range(itLen):
+        if nums1[i] in nums2 and nums1[i] not in num3:
+            num3.append(nums1[i])
+
+    return num3
 
 
-nums1 = [1, 2, 2, 1]
-nums2 = [2, 2]
+nums1 = [3, 2, 1]
+nums2 = [1]
 
 print(intersection(nums1, nums2))
