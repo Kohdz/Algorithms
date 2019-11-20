@@ -16,3 +16,4 @@
 19. simulate tree input
 20. modift an array without creating a copy
 21. 53_rangeSumQuery impossible to understand
+22. 59_heater difficult to understand
