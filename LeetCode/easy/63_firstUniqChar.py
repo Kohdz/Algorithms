@@ -72,3 +72,5 @@ def firstUniqCharHash(s):
             return idx
 
     return -1
+
+# function
