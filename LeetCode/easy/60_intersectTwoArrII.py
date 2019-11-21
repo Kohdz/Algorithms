@@ -21,13 +21,33 @@
 # What if elements of nums2 are stored on disk, and the memory is limited such that you
 # cannot load all elements into the memory at once?
 
+import collections
+
+
 def intersect(nums1, nums2):
 
-    return 0
+    if len(nums1) > len(nums2):
+        return intersect(nums2, nums1)
 
+    lookup = collections.defaultdict(int)
+    for i in nums1:
+        lookup[i] += 1
 
-nums1 = [1, 2, 2, 1]
-nums2 = [2, 2]
+    result = []
+    for i in nums2:
+        if lookup[i] > 0:
+            result += i,
+            lookup[i] -= 1
+
+    return result
+
+# nums1 = [1, 2, 2, 1]
+# nums2 = [2, 2]
 # Output: [2,2]
+
+
+nums1 = [1, 2]
+nums2 = [1, 1]
+# only return 1 if not in Totso
 
 print(intersect(nums1, nums2))
