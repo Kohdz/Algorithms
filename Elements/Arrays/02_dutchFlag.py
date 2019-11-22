@@ -1,6 +1,7 @@
 RED, WHITE, BLUE = range(3)
 
 
+# time O(n^2) | space O(1)
 def dutch_flag_partition(pivot_index, A):
     pivot = A[pivot_index]
 
@@ -27,6 +28,7 @@ def dutch_flag_partition(pivot_index, A):
     return A
 
 
+# time O(n) space O(1)
 def dutch_flag_partitionII(pivot_index, A):
     pivot = A[pivot_index]
     # First pass: group elements smaller than-pivot
@@ -48,6 +50,7 @@ def dutch_flag_partitionII(pivot_index, A):
     return A
 
 
+# time O(n) | space O(1)
 def dutch_flag_partitionIII(pivot_index, A):
     pivot = A[pivot_index]
 
