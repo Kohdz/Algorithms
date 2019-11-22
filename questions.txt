@@ -18,3 +18,4 @@
 21. 53_rangeSumQuery impossible to understand
 22. 59_heater difficult to understand
 23. 61_perfectSquare: why does  mid = left + (right - left) // 2 vs num // mid
+24. 65_sumOfLeaves: No idea what so ever whats happening
