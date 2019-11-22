@@ -1,3 +1,6 @@
+RED, WHITE, BLUE = range(3)
+
+
 def dutch_flag_partition(pivot_index, A):
     pivot = A[pivot_index]
 
@@ -21,6 +24,8 @@ def dutch_flag_partition(pivot_index, A):
             if A[j] > pivot:
                 A[i], A[j] = A[j], A[i]
 
+    return A
+
 
 def dutch_flag_partitionII(pivot_index, A):
     pivot = A[pivot_index]
@@ -39,3 +44,9 @@ def dutch_flag_partitionII(pivot_index, A):
             elif A[i] > pivot:
                 A[i], A[larger] = A[larger], A[i]
                 larger -= 1
+
+
+pivot_index = 3
+A = [0, 1, 2, 0, 2, 1]
+
+print(dutch_flag_partition(pivot_index, A))
