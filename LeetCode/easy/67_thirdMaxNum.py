@@ -35,14 +35,16 @@ print(thirdMax(nums))
 
 def thirdMaxII(nums):
 
-    v = 3 * [float('-inf')]
-    for num in nums:
-        if num not in v:
-            if num > v[0]:
-                v = [num, v[0], v[1]]
-            elif num > v[1]:
-                v[1], v[2] = num, v[1]
-            elif num > v[2]:
-                v[2] = num
+    fisrt_max, second_max, third_max = float(
+        '-inf'), float('-inf'), float('-inf')
+    for n in nums:
+        if n >= fisrt_max:
+            if n != fisrt_max:
+                fisrt_max, second_max, third_max = n, fisrt_max, second_max
+        elif n >= second_max:
+            if n != second_max:
+                second_max, third_max = n, second_max
+        elif n >= third_max:
+            third_max = n
 
-    return v[0] if float('-inf') in v else v[2]
+    return third_max if third_max != float('-inf') else fisrt_max
