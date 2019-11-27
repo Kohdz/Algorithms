@@ -14,6 +14,10 @@ def sum_matrix(matrix, cord1, cord2):
     print(matrix[cord1[1]][cord1[0]])
     print(matrix[cord2[1]][cord2[0]])
 
+    sum = 0
+
+    # for
+
     return 0
 
 

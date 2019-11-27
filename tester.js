@@ -1,18 +1,19 @@
-nums = [2, 7, 11, 15];
-target = 9;
-
-function twoSum(nums, target) {
-  let dict = {};
-  for (let i = 0; i < nums.length - 1; i++) {
-    diff = target - nums[i];
-    if (!(diff in dict)) {
-      dict[nums[i]] = i;
-    } else {
-      return [dict[target - nums[i]], i];
+const sumMatrixRegion = (matrix, [topLeftCol, topLeftRow], [botRightCol, botRightRow]) => {
+  let sum = 0
+  
+  for (let row = topLeftRow; row <= botRightRow; row += 1) {
+    for (let col = topLeftCol; col <= botRightCol; col += 1) {
+      sum += matrix[row][col]
     }
   }
+  
+  return sum
 }
-
-console.log(twoSum(nums, target));
-
-// for (let step = 0; step < 5; step++) {
+​
+const inputMatrix = [
+  [1, 2, 3, 4], 
+  [5, 6, 7, 8],
+  [9, 0, 1, 2]
+]
+​
+const sum = sumMatrixRegion(inputMatrix, [1, 1], [3, 2]) 
