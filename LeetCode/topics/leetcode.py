@@ -28,7 +28,7 @@
 # Trees
 # Maximum Dept of Binary Tree (26)- https://leetcode.com/problems/maximum-depth-of-binary-tree/
 # Same Tree (24)                   - https://leetcode.com/problems/same-tree/
-# Invert Binary Tree              - https://leetcode.com/problems/invert-binary-tree/
+# Invert Binary Tree (47)          - https://leetcode.com/problems/invert-binary-tree/
 # Subtree of Another Tree         - https://leetcode.com/problems/subtree-of-another-tree/
 # Lowest Common Ancestor of BST   - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
 # Symmetric Tree                  - https://leetcode.com/problems/symmetric-tree/

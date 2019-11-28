@@ -23,8 +23,35 @@
 # Definition for a binary tree node.
 
 
+import collections
+
+
 def invertTreeRec(root):
     if root is not None:
         root.left, root.right = invertTreeRec(
             root.right), invertTreeRec(root.left)
+    return root
+
+
+# Depth First Search
+def invertTreeStack(root):
+    stack = [root]
+    while stack:
+        node = stack.pop()
+        if node:
+            node.left, node.right = node.right, node.left
+            stack += node.left, node.right
+
+    return root
+
+
+# Breath First Search
+def invertTreeQueue(root):
+    queue = collections.deque([(root)])
+    while queue:
+        node = queue.popleft()
+        if node:
+            node.left, node.right = node.right, node.left
+            queue.append(node.left)
+            queue.append(node.right)
     return root
