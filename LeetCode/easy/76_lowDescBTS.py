@@ -21,7 +21,6 @@
 # Explanation: The LCA of nodes 2 and 4 is 2, since
 # a node can be a descendant of itself according to the LCA definition.
 
-
 # Note:
 # All of the nodes' values will be unique.
 # p and q are different and both values will exist in the BST.
