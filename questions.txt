@@ -21,3 +21,4 @@
 24. 65_sumOfLeaves: No idea what so ever whats happening
 25. 68_strCompression: go over this question
 26. 69_numOfBoomarangs: what does (inclusive) mean
+27. 75_subTree: dificult to understand whats happening
