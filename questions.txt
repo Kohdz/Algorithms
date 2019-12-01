@@ -22,3 +22,4 @@
 25. 68_strCompression: go over this question
 26. 69_numOfBoomarangs: what does (inclusive) mean
 27. 75_subTree: dificult to understand whats happening
+28. 25_symTree.py - Explain this Line value = [x.val if x else None for x in queue]
