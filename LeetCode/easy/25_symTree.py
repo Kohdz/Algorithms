@@ -34,6 +34,6 @@ def isSymetricRec(left, right):
     if left is None or right is None or left.val != right.val:
         return False
 
-    return isSymetricRec(left.left, right.right) and isSymetricRec(left, right)
+    return isSymetricRec(left.left, right.right) and isSymetricRec(left.right, right.left)
 
 # space complexity is poroptial to the height of the tree and scales with ith
