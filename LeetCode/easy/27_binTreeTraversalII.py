@@ -37,3 +37,17 @@ def levelOrderBottom(root):
         result.append(vals)
 
         return result[::-1]
+
+
+def levelOrderBottomII(root):
+
+    if not root:
+        return []
+
+    q, ans = [root], []
+    while q:
+        ans += [[n.val for n in q]]
+        q = [k for n in q for k in (
+            [n.left] if n.left else []) + ([n.right] if n.right else [])]
+
+        return ans[::-1]
