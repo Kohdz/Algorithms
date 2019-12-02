@@ -36,7 +36,7 @@ def levelOrderBottom(root):
         current = next_level
         result.append(vals)
 
-        return result[::-1]
+    return result[::-1]
 
 
 def levelOrderBottomII(root):

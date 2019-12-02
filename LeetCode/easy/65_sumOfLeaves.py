@@ -43,3 +43,16 @@ class Solution(object):
             return left + right
 
         return helper(root, "")
+
+
+def sumOfLeftLeaves(root, isLeftChild=False):
+    """
+    :type root: TreeNode
+    :type isLeftChild: bool
+    :rtype: int
+    """
+    if not root:
+        return 0
+    if not root.left and not root.right:
+        return root.val if isLeftChild else 0
+    return sumOfLeftLeaves(root.left, True) + sumOfLeftLeaves(root.right, False)
