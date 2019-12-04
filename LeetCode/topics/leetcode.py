@@ -33,8 +33,8 @@
 # Lowest Common Ancestor BST (76)                   - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
 # Symmetric Tree (25)                               - https://leetcode.com/problems/symmetric-tree/
 # Binary Tree Level Order Traversal I (27)          - https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
-# Sum of left leaves        (64)                    - https://leetcode.com/problems/sum-of-left-leaves/
-# Diameter of a Binary Tree                         - https://leetcode.com/problems/diameter-of-binary-tree/
+# Sum of left leaves (64)                           - https://leetcode.com/problems/sum-of-left-leaves/
+# Diameter of a Binary Tree (77)  (Review)          - https://leetcode.com/problems/diameter-of-binary-tree/
 # Binary Tree Paths                                 - https://leetcode.com/problems/binary-tree-paths/
 
 # TreesII
