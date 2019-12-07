@@ -19,17 +19,17 @@
 #   return n * factorial(n-1);
 
 
-def factorial(n):
+def bunnyEars(n):
 
     if n == 0:
         return 0
 
-    return 2 + factorial(n-1)
+    return 2 + bunnyEars(n-1)
 
 
 n = 0
 n2 = 1
 n3 = 2
-print(factorial(n))
-print(factorial(n2))
-print(factorial(n3))
+print(bunnyEars(n))
+print(bunnyEars(n2))
+print(bunnyEars(n3))
