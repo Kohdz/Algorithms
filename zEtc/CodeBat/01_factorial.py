@@ -18,7 +18,7 @@ def factorial(n):
 
 n = 1
 n1 = 2
-n2 = 3
+n2 = 2
 print(factorial(n))
 print(factorial(n1))
 print(factorial(n2))

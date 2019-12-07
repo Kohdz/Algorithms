@@ -23,3 +23,22 @@
 26. 69_numOfBoomarangs: what does (inclusive) mean
 27. 75_subTree: dificult to understand whats happening
 28. 25_symTree.py - Explain this Line value = [x.val if x else None for x in queue]
+
+29. why does code not work
+def factorial(n):
+
+    if n == 1:
+        return 1
+
+    return n * factorial(n-1)
+
+
+n = 0
+n2 = 1
+n3 = 2
+print(factorial(n))
+print(factorial(n2))
+print(factorial(n3))
+
+
+30. 
