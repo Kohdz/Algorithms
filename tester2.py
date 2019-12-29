@@ -1,56 +1,54 @@
-def multiply(x, y):
-    def add(a, b):
-        print("a: ", bin(a))
-        print("b: ", bin(b))
-        running_sum, carryin, k, temp_a, temp_b = 0, 0, 1, a, b
-        while temp_a or temp_b:
-            print("k: ", bin(k))
-            print("carryin: ", bin(carryin))
-            print("temp_a: ", bin(temp_a))
-            print("tempb: ", bin(temp_b))
-            print("")
-            ak, bk = a & k, b & k
-            print("ak: ", bin(ak))
-            print("bk: ", bin(bk))
-            print("ak & k: ", bin(ak & k))
-            print("bk & k: ", bin(bk & k))
-            print("")
-            print("ak & bk: ", bin(ak & bk))
-            print("ak & carryin: ", bin(ak & carryin))
-            print("bk & carryin: ", bin(bk & carryin))
-            print("")
-            carryout = (ak & bk) | (ak & carryin) | (bk & carryin)
-            print("ak ^ bk: ", bin(ak ^ bk))
-            print("carryin: ", bin(carryin))
-            running_sum |= ak ^ bk ^ carryin
-            print("running_sum: ", bin(running_sum))
-            print("")
-
-            carryin, k, temp_a, temp_b = \
-                (carryout << 1, k << 1, temp_a >> 1, temp_b >> 1)
-            print("carryout: ", bin(carryout))
-            print("k: ", bin(k))
-            print("temp_a: ", bin(temp_a))
-            print("temp_b: ", bin(temp_b))
-            print("")
-
-        print("running_sum | carrying: ", bin(running_sum | carryin))
-        return running_sum | carryin
-
-    running_sum = 0
-    while x:  # examines each bit of x
-        print("x: ", bin(x))
-        print("")
-        if x & 1:
-            print("x & 1: ", bin(x & 1))
-            running_sum = add(running_sum, y)
-        print("x: ", bin(x >> 1))
-        print("y: ", bin(y << 1))
-        print("")
-        x, y = x >> 1, y << 1
-    return running_sum
+#  5. Write a program that multiplies two nonnegative integers.  The only operators you are
+#  allowed to use are
+#     - assignment
+#     - the bitwise operators >>, <<, |, &, ~, ^, and
+#     - equality checks and Boolean combinations thereof
 
 
 x = 3
 y = 2
-print(multiply(x, y))
+
+# ------------------------------------------------------------------------------------------------------------------
+
+# 1.  Write a program that takes an array A and an index i into A, and rearranges the elements
+# such that all elements less than A[i] (the 'pivot') appear first, followed by elements equal to
+# the pivot, followed by elements greater than the pivot
+# - Method I
+# - Method II
+# - Method III
+
+# A = [0, 1, 2, 0, 1, 2, 0] # [0, 0, 0, 1, 2, 1, 2]
+# pivot_index = 3
+
+# 2.  Write a program which takes as input an array of digits encoding a nonnegative decimal integer D
+#  and updates the array to represent the integer D + 1. For example, if the input is <1, 2, 9> then you
+#  should update the array to <1, 3, 0>. Your algorithm should work even if it is implemented in a language
+#  that has finite-prescision arthemetic.
+
+# A =[1, 2, 9] #[1, 3, 0]
+
+# 3.  Write a program that takes two arrays representing integers, and return an integer representing their
+# proiduct.  For example since 193707721.x -761838257287 = -147573952589676412927, if the input are
+# <1,9,3,7,0,7,7,2, 1> and <-7,6,L,8,3,8,2,5,7,2,8,7>, your  function should return
+# <1, 4,7, 5,7,3, 9, 5, 2, 5,8,9, 6,7, 6, 4, 1., 2,9,2,7>.
+
+# num1 = [1,9,3,7,0,7,7,2, 1]
+# num2 = [-7,6,L,8,3,8,2,5,7,2,8,7]
+# result = [-1, 4,7, 5,7,3, 9, 5, 2, 5,8,9, 6,7, 6, 4, 1., 2,9,2,7]
+
+# 4.  Write a program which takes an array of n integers, where A[i] denotes the maximum you can advancxe from index i
+# , and returns whether it is possible to advance to the last index starting from the beginning of the array. For example,
+#  let A = (3,3,1,0,2,0,1) represent the board game, i.e., the lth entry in A is the maximum we can advance from L Then the
+#  game can be won by the following sequence of advances through A: take 1 step from A[0] to A[1], then 3 steps from A[1]
+# to A[4], then 2 steps from A[4]toA[6], which is the last Position. Note that A[0] =3 >= 1, 4[1] = 3 >= 3,andA[4] = 2 >= 2,
+#  so all moves are valid. If A instead was (3, 2, 0, 0, 2, 0, 1), it would not possible to advance past position 3, so the
+#  game cannot be won.
+
+# A = (2, 4, 1, 1, 0, 2, 3) # index 6
+
+
+# 5.  Write a program which takes as input a sorted array and updates it so that all duplicates have been removed and the
+#  remaining elements have been shifted left to fill the emptied indices.  Return the number of valid elements.  Many
+# languages have library functions for performing this operation -- you cannot use these functions
+
+# A = [2, 3, 5, 5, 7, 11, 11, 13] #6 elements
