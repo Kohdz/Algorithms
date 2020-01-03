@@ -1,21 +1,30 @@
+def multiply(x, y):
+
+    def add(a, b):
+        
+        running_sum, carryin, k, temp_a, temp_b = 0, 0, 1, a, b
+
+        while temp_a or temp_b:
+            ak, bk = a & k, b & k
+
+            carryout = (ak & bk) | (ak & carryin) | (bk & carryin)
+
+            running_sum |= ak ^ bk ^ carryin
+
+            carryin, k, temp_a, temp_b = carryout << 1, k << 1, temp_b >> 1, temp_b >> 1
+
+        return running_sum | carryin
 
 
-# even to fron of list
+    running_sum = 0
+    while x:
 
-ordList = [1, 2, 3, 4, 5, 6, 7, 8]
+        if x & 1:
 
+            running_sum = add(running_sum, y)
+        
+        x, y = x >> 1, y << 1
 
-def even_odd(ordList):
-    even, odd = 0, len(ordList)-1
+    return running_sum
 
-    while even < odd:
-        if ordList[even] % 2 == 0:
-            even += 1
-        else:
-            ordList[even], ordList[odd] = ordList[odd], ordList[even]
-            odd -= 1
-
-    return ordList
-
-
-print(even_odd(ordList))
+print(multiply(2, 3))

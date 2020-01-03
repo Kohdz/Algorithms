@@ -1,19 +1,36 @@
-const sumMatrixRegion = (matrix, [topLeftCol, topLeftRow], [botRightCol, botRightRow]) => {
-  let sum = 0
-  
-  for (let row = topLeftRow; row <= botRightRow; row += 1) {
-    for (let col = topLeftCol; col <= botRightCol; col += 1) {
-      sum += matrix[row][col]
+// arr = [1, 2, 3, 4, 5];
+
+// let newArr = [];
+// function reverseArr(arr) {
+//   if (arr.length === 1) {
+//     newArr.push(arr);
+//     console.log(newArr);
+//     return re;
+//   } else {
+//     return reverseArr(arr.slice(1));
+//   }
+// }
+
+
+// console.log(reverseArr(arr));
+
+// getLongestName
+// Get Longest Name
+// Write a function, getLongestName, that takes an object. The object represents a family tree. Return the longest name in the family.
+​
+let family = {
+  'Beverly Marquez': {
+    'Nina Rhone': {
+      'William Rhodes': null,
+      'Paul Nell': null,
+      'Sir Paddington the Fourth, of the county Wilstonshire': null
     }
   }
+};
+​// => 'Sir Paddington the Fourth, of the county Wilstonshire'
+getLongestName(family, name="", nameLen = 0) 
+{
   
-  return sum
+
 }
-​
-const inputMatrix = [
-  [1, 2, 3, 4], 
-  [5, 6, 7, 8],
-  [9, 0, 1, 2]
-]
-​
-const sum = sumMatrixRegion(inputMatrix, [1, 1], [3, 2]) 
+// function reverseArr(arr) {
