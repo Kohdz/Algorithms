@@ -1,3 +1,6 @@
+# proof of why num_digits = log10(x) + 1
+# https://math.stackexchange.com/questions/231742/proof-how-many-digits-does-a-number-have-lfloor-log-10-n-rfloor-1
+
 import math
 
 

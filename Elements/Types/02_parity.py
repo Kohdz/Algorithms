@@ -13,6 +13,12 @@ def parity(x):
         # O ^ O = 0
         # 1 ^ 0 = 1
         # 0 ^ 1 = 1
+
+
+        # an encounter with 1 will make result odd
+        # only an other encounter with 1 will make it back even
+        # see how we need 2 encounters to make it back even
+        # 2 and all its multiples are even
         result ^= x & 1
 
         x >>= 1
