@@ -17,7 +17,8 @@
 #   [3]
 # ]
 
-
+# using an array as an queue
+#  breath first search with d
 def levelOrderBottom(root):
 
     if root is None:
