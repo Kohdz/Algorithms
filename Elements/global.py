@@ -59,34 +59,39 @@
 #       x = 1221
 
 # ------------------------------------------------------------------------------------------------------------------
+# 1. Your input is an array of integers, and you have to reorder its entries so that even entries appear first.
+# This is easy if you use O(n) space, where n is the length of the array.  However, you are required to solve it
+# without allocating additional storage
 
-# 1.  Write a program that takes an array A and an index i into A, and rearranges the elements
+#       A = [1, 2, 3, 4, 5]
+
+# 2.  Write a program that takes an array A and an index i into A, and rearranges the elements
 # such that all elements less than A[i] (the 'pivot') appear first, followed by elements equal to
 # the pivot, followed by elements greater than the pivot
-# - Method I
-# - Method II
-# - Method III
+#       - Method I
+#       - Method II
+#       - Method III
 
-# A = [0, 1, 2, 0, 1, 2, 0] # [0, 0, 0, 1, 2, 1, 2]
-# pivot_index = 3
+#       A = [0, 1, 2, 0, 1, 2, 0] # [0, 0, 0, 1, 2, 1, 2]
+#       pivot_index = 3
 
-# 2.  Write a program which takes as input an array of digits encoding a nonnegative decimal integer D
+# 3.  Write a program which takes as input an array of digits encoding a nonnegative decimal integer D
 #  and updates the array to represent the integer D + 1. For example, if the input is <1, 2, 9> then you
 #  should update the array to <1, 3, 0>. Your algorithm should work even if it is implemented in a language
 #  that has finite-prescision arthemetic.
 
-# A =[1, 2, 9] #[1, 3, 0]
+#       A =[1, 2, 9] #[1, 3, 0]
 
-# 3.  Write a program that takes two arrays representing integers, and return an integer representing their
+# 4.  Write a program that takes two arrays representing integers, and return an integer representing their
 # proiduct.  For example since 193707721.x -761838257287 = -147573952589676412927, if the input are
 # <1,9,3,7,0,7,7,2, 1> and <-7,6,L,8,3,8,2,5,7,2,8,7>, your  function should return
 # <1, 4,7, 5,7,3, 9, 5, 2, 5,8,9, 6,7, 6, 4, 1., 2,9,2,7>.
 
-# num1 = [1,9,3,7,0,7,7,2, 1]
-# num2 = [-7,6,L,8,3,8,2,5,7,2,8,7]
-# result = [-1, 4,7, 5,7,3, 9, 5, 2, 5,8,9, 6,7, 6, 4, 1., 2,9,2,7]
+#       num1 = [1,9,3,7,0,7,7,2, 1]
+#       num2 = [-7,6,L,8,3,8,2,5,7,2,8,7]
+#       result = [-1, 4,7, 5,7,3, 9, 5, 2, 5,8,9, 6,7, 6, 4, 1., 2,9,2,7]
 
-# 4.  Write a program which takes an array of n integers, where A[i] denotes the maximum you can advancxe from index i
+# 5.  Write a program which takes an array of n integers, where A[i] denotes the maximum you can advancxe from index i
 # , and returns whether it is possible to advance to the last index starting from the beginning of the array. For example,
 #  let A = (3,3,1,0,2,0,1) represent the board game, i.e., the lth entry in A is the maximum we can advance from L Then the
 #  game can be won by the following sequence of advances through A: take 1 step from A[0] to A[1], then 3 steps from A[1]
@@ -94,11 +99,11 @@
 #  so all moves are valid. If A instead was (3, 2, 0, 0, 2, 0, 1), it would not possible to advance past position 3, so the
 #  game cannot be won.
 
-# A = (2, 4, 1, 1, 0, 2, 3) # index 6
+#       A = (2, 4, 1, 1, 0, 2, 3) # index 6
 
 
-# 5.  Write a program which takes as input a sorted array and updates it so that all duplicates have been removed and the
+# 6.  Write a program which takes as input a sorted array and updates it so that all duplicates have been removed and the
 #  remaining elements have been shifted left to fill the emptied indices.  Return the number of valid elements.  Many
 # languages have library functions for performing this operation -- you cannot use these functions
 
-# A = [2, 3, 5, 5, 7, 11, 11, 13] #6 elements
+#       A = [2, 3, 5, 5, 7, 11, 11, 13] #6 elements
