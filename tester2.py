@@ -1,61 +1,60 @@
-<<<<<<< HEAD
-def multiply(x, y):
-=======
-import math
->>>>>>> 0552f9fb1f8c3f4698e8bcb80c77e680868efc68
+# 1. Write A Program to count the number of bits set to 1
 
-    def add(a, b):
-        
-        running_sum, carryin, k, temp_a, temp_b = 0, 0, 1, a, b
+#       x = 12 # 1100
 
-<<<<<<< HEAD
-        while temp_a or temp_b:
-            ak, bk = a & k, b & k
+# 2. How would you compute the parity of a very large number of 64-bit words
+# - Method 1
+# - Method 2
+# - Method 3
 
-            carryout = (ak & bk) | (ak & carryin) | (bk & carryin)
+#       x = 12 # 1100
 
-            running_sum |= ak ^ bk ^ carryin
+# 3. Swap Bits. Swap the 1-index bit
 
-            carryin, k, temp_a, temp_b = carryout << 1, k << 1, temp_b >> 1, temp_b >> 1
+#       x = 0b01001001 #00001011
 
-        return running_sum | carryin
+# 4. Write a program that takes a 64-th bit unsigned integer and returns the 64-bit unsigned
+# integer consisting of the bits of the input in reverse order.  For example, the input is
+# (1110000000000001), the output should be (1000000000000111).
 
+#       x = 0b1110000000000001 #1000000000000111
 
-    running_sum = 0
-    while x:
+# 5. Define the weight of a nonnegative integer x to be the number of bits that are set to 1
+# in its binary representation.  For example, since 92 in base-2 equals (1011100), the weight
+# of 92 is 4.  Write a program which takes as input a nonnegative integer x and returns a
+# number y which is not equal to x, but has the same weight as x and their difference, |y - x|,
+# is as small as possible.  You can assume x is not 0, or all 1s.  For example, if x = 6,
+# you should return 5.  You can assume the integer fits in 64 bits.
 
-        if x & 1:
+#       x = 6 #5
 
-            running_sum = add(running_sum, y)
-        
-        x, y = x >> 1, y << 1
+#  5. Write a program that multiplies two nonnegative integers.  The only operators you are
+#  allowed to use are
+#     - assignment
+#     - the bitwise operators >>, <<, |, &, ~, ^, and
+#     - equality checks and Boolean combinations thereof
 
-    return running_sum
+#       x = 3
+#       y = 2
 
-print(multiply(2, 3))
-=======
-def is_palindrome(x):
+# 6. given two postive integers, compute their quotient, using only the addition, subtraction
+# and shifting operators
+# relate x/y to (x-y)/y
 
-    if x <= 0:
-        return x == 0
+#       x = 10
+#       y = 3
 
-    num_digits = math.floor(math.log10(x)) + 1
-    msd_mask = 10**(num_digits - 1)
+# 7. Write a program that takes a doube x and an integer y and returns x^y, You can ignore overflow
+# and underflow
 
-    # this gives us the number of digits that brilla
-    num_digits = math.floor(math.log10(x))
+#       x = 2
+#       y = 2
 
-    for i in range(num_digits // 2):
+# 8.  Write a program which takes an integer and return the integer corresponding to the digits of the
+# input written in reverse order.  For example, the reverse of 42 is 24, and the reverse of -314 is -413.
 
-        if x // msd_mask != x % 10:
-            return False
+# 9.  Write a program that takea an integer and determines if that integer representation as a decimal string
+# is a palindrome.  For example 121 is is a palindrome; 7 is a palindrome; -1 is not
 
-        x %= msd_mask  # removes the most significant digit of x
-        x //= 10  # removes the least significant digit of x
-        msd_mask //= 100
+#       x = 1221
 
-    return True
-
-
-print(is_palindrome(1221))
->>>>>>> 0552f9fb1f8c3f4698e8bcb80c77e680868efc68
