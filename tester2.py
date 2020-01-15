@@ -1,17 +1,15 @@
-# 1. Write A Program to count the number of bits set to 1
-
-#       x = 12 # 1100
-
-# 2. How would you compute the parity of a very large number of 64-bit words
-# - Method 1
-# - Method 2
-# - Method 3
-
-#       x = 12 # 1100
-
 # 3. Swap Bits. Swap the 1-index bit
 
-#       x = 0b01001001 #00001011
+
+def swap_bits(x):
+
+    pass
+
+
+i = 1
+j = 6
+x = 0b01001001  # 00001011
+print(swap_bits(x, i, j))
 
 # 4. Write a program that takes a 64-th bit unsigned integer and returns the 64-bit unsigned
 # integer consisting of the bits of the input in reverse order.  For example, the input is
@@ -57,4 +55,3 @@
 # is a palindrome.  For example 121 is is a palindrome; 7 is a palindrome; -1 is not
 
 #       x = 1221
-

@@ -9,7 +9,7 @@
 
 #       x = 12 # 1100
 
-# 3. Swap Bits. Swap the 1-index bit
+# 3. Swap Bits. Swap the i-index bit. Swap the first bit with the 6th bit
 
 #       x = 0b01001001 #00001011
 
