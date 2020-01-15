@@ -1,16 +1,3 @@
-# 3. Swap Bits. Swap the 1-index bit
-
-
-def swap_bits(x):
-
-    pass
-
-
-i = 1
-j = 6
-x = 0b01001001  # 00001011
-print(swap_bits(x, i, j))
-
 # 4. Write a program that takes a 64-th bit unsigned integer and returns the 64-bit unsigned
 # integer consisting of the bits of the input in reverse order.  For example, the input is
 # (1110000000000001), the output should be (1000000000000111).

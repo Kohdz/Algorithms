@@ -28,7 +28,7 @@
 
 #       x = 6 #5
 
-#  5. Write a program that multiplies two nonnegative integers.  The only operators you are
+#  6. Write a program that multiplies two nonnegative integers.  The only operators you are
 #  allowed to use are
 #     - assignment
 #     - the bitwise operators >>, <<, |, &, ~, ^, and
@@ -37,23 +37,23 @@
 #       x = 3
 #       y = 2
 
-# 6. given two postive integers, compute their quotient, using only the addition, subtraction
+# 7. given two postive integers, compute their quotient, using only the addition, subtraction
 # and shifting operators
 # relate x/y to (x-y)/y
 
 #       x = 10
 #       y = 3
 
-# 7. Write a program that takes a doube x and an integer y and returns x^y, You can ignore overflow
+# 8. Write a program that takes a doube x and an integer y and returns x^y, You can ignore overflow
 # and underflow
 
 #       x = 2
 #       y = 2
 
-# 8.  Write a program which takes an integer and return the integer corresponding to the digits of the
+# 9.  Write a program which takes an integer and return the integer corresponding to the digits of the
 # input written in reverse order.  For example, the reverse of 42 is 24, and the reverse of -314 is -413.
 
-# 9.  Write a program that takea an integer and determines if that integer representation as a decimal string
+# 10.  Write a program that takea an integer and determines if that integer representation as a decimal string
 # is a palindrome.  For example 121 is is a palindrome; 7 is a palindrome; -1 is not
 
 #       x = 1221
