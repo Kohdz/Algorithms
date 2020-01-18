@@ -1,9 +1,0 @@
-Binary Search
-    - When do you use it
-
-Trees
-    - create a tree from scratch
-
-Collections
-    - use collections/Hashmaps
-    
