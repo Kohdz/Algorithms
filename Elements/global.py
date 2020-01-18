@@ -84,11 +84,11 @@
 
 # 4.  Write a program that takes two arrays representing integers, and return an integer representing their
 # proiduct.  For example since 193707721.x -761838257287 = -147573952589676412927, if the input are
-# <1,9,3,7,0,7,7,2, 1> and <-7,6,L,8,3,8,2,5,7,2,8,7>, your  function should return
+# <1,9,3,7,0,7,7,2, 1> and <-7,6,1,8,3,8,2,5,7,2,8,7>, your  function should return
 # <1, 4,7, 5,7,3, 9, 5, 2, 5,8,9, 6,7, 6, 4, 1., 2,9,2,7>.
 
 #       num1 = [1,9,3,7,0,7,7,2, 1]
-#       num2 = [-7,6,L,8,3,8,2,5,7,2,8,7]
+#       num2 = [-7,6,1,8,3,8,2,5,7,2,8,7]
 #       result = [-1, 4,7, 5,7,3, 9, 5, 2, 5,8,9, 6,7, 6, 4, 1., 2,9,2,7]
 
 # 5.  Write a program which takes an array of n integers, where A[i] denotes the maximum you can advancxe from index i
