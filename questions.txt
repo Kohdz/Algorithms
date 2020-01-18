@@ -1,0 +1,44 @@
+1.  when subtracting binary numbers, why do we replace the zero with 2
+4.  ask about itme complexity O (n/L)
+6.  converting any int to a base: try to look this up 
+7.  Ask Questions About 29_balBinTree: walkthrough
+8.  Ask about 32_pathSum: how does root.left go root.right
+9.  Confused by using bitwise operations to do multiplication/division/powers
+10. How is 1.1^21 simplified by braking it down to 1.1*1.1^2 then doing 1.21 *10
+11. why do all of these bits stuff have a -1
+12. 10_isPalDecimal: why does math.floor(math.log10(x)) + 1 return number of digits
+13. 10_isPalDecimal: how does this equation work
+14. ask about this line: count = sum(1 for elem in nums if elem == num)
+15.  40_majorityElement (sorting) understanding
+16. 40_majorityElement (binary search) complexity analysis
+17. 42_rotateArray cyclic replacement? lookup?
+18. 43_why are they using previous.next
+19. simulate tree input
+20. modift an array without creating a copy
+21. 53_rangeSumQuery impossible to understand
+22. 59_heater difficult to understand
+23. 61_perfectSquare: why does  mid = left + (right - left) // 2 vs num // mid
+24. 65_sumOfLeaves: No idea what so ever whats happening
+25. 68_strCompression: go over this question
+26. 69_numOfBoomarangs: what does (inclusive) mean
+27. 75_subTree: dificult to understand whats happening
+28. 25_symTree.py - Explain this Line value = [x.val if x else None for x in queue]
+
+29. why does code not work
+def factorial(n):
+
+    if n == 1:
+        return 1
+
+    return n * factorial(n-1)
+
+
+n = 0
+n2 = 1
+n3 = 2
+print(factorial(n))
+print(factorial(n2))
+print(factorial(n3))
+
+
+30. 
