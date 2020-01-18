@@ -1,44 +1,38 @@
-# 4. Write a program that takes a 64-th bit unsigned integer and returns the 64-bit unsigned
-# integer consisting of the bits of the input in reverse order.  For example, the input is
-# (1110000000000001), the output should be (1000000000000111).
+# 6.  Write a program which takes as input a sorted array and updates it so that all duplicates have been removed and the
+#  remaining elements have been shifted left to fill the emptied indices.  Return the number of valid elements.  Many
+# languages have library functions for performing this operation -- you cannot use these functions
 
-#       x = 0b1110000000000001 #1000000000000111
 
-# 5. Define the weight of a nonnegative integer x to be the number of bits that are set to 1
-# in its binary representation.  For example, since 92 in base-2 equals (1011100), the weight
-# of 92 is 4.  Write a program which takes as input a nonnegative integer x and returns a
-# number y which is not equal to x, but has the same weight as x and their difference, |y - x|,
-# is as small as possible.  You can assume x is not 0, or all 1s.  For example, if x = 6,
-# you should return 5.  You can assume the integer fits in 64 bits.
+def delete_dup(A):
 
-#       x = 6 #5
+    # since it is sorted, we want to be able to abuse that fact
+    # so we go i and i + 1;
+    # compate the nums
+    # if they are not the same, keep moving
+    # return endicies, meansing 6
+    # if they are same swap, then ending indixes
 
-#  5. Write a program that multiplies two nonnegative integers.  The only operators you are
-#  allowed to use are
-#     - assignment
-#     - the bitwise operators >>, <<, |, &, ~, ^, and
-#     - equality checks and Boolean combinations thereof
+    pass
 
-#       x = 3
-#       y = 2
 
-# 6. given two postive integers, compute their quotient, using only the addition, subtraction
-# and shifting operators
-# relate x/y to (x-y)/y
+A = [2, 3, 5, 5, 7, 11, 11, 13]  # 6 elements
+print(delete_dup(A))
+# 7. Write a program that takes an array denoting the daily stock price, and returning the maximum profit that could be made
+# by buying and then selling one share of that stock.  There is no need to buy if no profit is possible
 
-#       x = 10
-#       y = 3
+#       A = [310, 315. 275, 295, 260, 270, 290, 230, 255, 250] #30
 
-# 7. Write a program that takes a doube x and an integer y and returns x^y, You can ignore overflow
-# and underflow
+# 8. Write a program that computes the maximum profit that can be made by buying and selling a share at most twice. The second
+# buy must be made on another date after the first sale.
 
-#       x = 2
-#       y = 2
+#       A = [12, 11, 13, 9, 12, 8, 14, 13, 15] #10
 
-# 8.  Write a program which takes an integer and return the integer corresponding to the digits of the
-# input written in reverse order.  For example, the reverse of 42 is 24, and the reverse of -314 is -413.
+# 9. Write a program that takes an array A of n numbers, and rearranges A's elements to get a new array B having the property that
+# B[0] <= B[1] >= B[2] <= B[3] >= B[4] <= B[5] >= ...
 
-# 9.  Write a program that takea an integer and determines if that integer representation as a decimal string
-# is a palindrome.  For example 121 is is a palindrome; 7 is a palindrome; -1 is not
+#       A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-#       x = 1221
+# 10.  A natural number is called a prime if it has a bigger than 1 and has no divisors other than 1 and itself. For example, if the
+#  input is 18, you should return [2, 3, 5, 7, 11, 13, 17]
+
+#       n = 18 #[2, 3, 5, 7, 11, 13, 17]
