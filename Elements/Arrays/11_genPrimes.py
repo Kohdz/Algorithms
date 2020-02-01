@@ -42,7 +42,7 @@ def generate_primesII(n):
     for i in range(size):
         if is_prime[i]:
 
-            p = 1 * 2 + 3
+            p = i * 2 + 3
             primes.append(p)
 
             # Sieving from p^2, where p^2 = (4i^2 + 12i + 9). The index in is_prime
