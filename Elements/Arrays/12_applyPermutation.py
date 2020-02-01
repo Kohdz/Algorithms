@@ -16,9 +16,14 @@ def apply_permutation(perm, A):
             perm[next] -= len(perm)
             next = temp
         # restore perm
-        perm[:] = [a + len(perm) for a in perm]
+    perm[:] = [a + len(perm) for a in perm]
 
     return A
+
+
+perm = [2, 0, 1, 3]
+A = ['a', 'b', 'c', 'd']  # ['c', 'a', 'b', 'd']
+print(apply_permutation(perm, A))
 
 
 def apply_permutationII(perm, A):
