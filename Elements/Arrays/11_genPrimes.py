@@ -50,5 +50,5 @@ def generate_primesII(n):
 
             # note that we need to use long for j because p^2 might overflow
             for j in range(2 * i**2 + 6 * i + 3, size, p):
-                if_prime[j] = False
+                is_prime[j] = False
     return primes
