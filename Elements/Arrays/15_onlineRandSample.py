@@ -22,3 +22,8 @@ def online_random_sample(it, k):
             sampling_results[idx_to_replace] = x
 
         return sampling_results
+
+
+k = 2
+it = ['p', 'q', 'r', 't', 'u', 'v']
+print(online_random_sample(it, k))

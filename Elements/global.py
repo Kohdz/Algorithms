@@ -138,10 +138,18 @@
 #       perm = [2, 0, 1, 3]
 #       A = ['a', 'b', 'c', 'd']  # ['c', 'a', 'b', 'd']
 
-#13. Write a program that takes as input a permutation, and returns the next permutation
+# 13. Write a program that takes as input a permutation, and returns the next permutation
 # under dictionary ordering.  If the permutation is the last permutation, return the
 # empty array.  For example, if the input is <1, 0, 3, 2> your function should return
 # <1, 2, 0, 3>.  If the input is <3, 2, 1, 0>, return <>.
 
-#       perm = [1, 0, 3, 2] # <1, 2, 0, 3>. 
+#       perm = [1, 0, 3, 2] # <1, 2, 0, 3>.
 
+# 15. Implement an algorithm that takes as input an array of distinct elements and
+# a size, and returns a subset of the given size of the array elements. All
+# subsets should be equally likely. Return the results in input array itself
+
+#      A = [3, 7, 5, 11]
+#      k = 3
+
+16.
