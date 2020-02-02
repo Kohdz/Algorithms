@@ -52,3 +52,7 @@ def generate_primesII(n):
             for j in range(2 * i**2 + 6 * i + 3, size, p):
                 is_prime[j] = False
     return primes
+
+
+n = 10
+print(generate_primesII(n))
