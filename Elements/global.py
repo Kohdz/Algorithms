@@ -152,4 +152,8 @@
 #      A = [3, 7, 5, 11]
 #      k = 3
 
-16.
+# 16. Design a program that takes as input a size k, and reads packets, continuously
+# maintaining a uniform random subset of size k of the read packets
+
+#      k = 2
+#      it = ['p', 'q', 'r', 't', 'u', 'v']
