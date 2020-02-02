@@ -10,3 +10,8 @@ def random_sampling(k, A):
         # Generate a random index in [i, len(A) - 1].
         r = random.randint(i, len(A) - 1)
         A[i], A[r] = A[r], A[i]
+
+A = [3, 7, 5, 11]
+k = 3
+
+print(random_sampling(k, A))
