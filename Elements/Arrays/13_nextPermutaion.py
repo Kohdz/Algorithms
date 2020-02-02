@@ -27,3 +27,6 @@ def next_permutation(perm):
     # so we simply reverse these entires to get the smallest dictionary order
     perm[inversion_point + 1:] = reversed(perm[inversion_point + 1:])
     return perm
+
+perm = [1, 0, 3, 2] # <1, 2, 0, 3>. 
+print(next_permutation(perm))
