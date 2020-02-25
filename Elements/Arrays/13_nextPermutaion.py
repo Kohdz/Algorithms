@@ -4,6 +4,15 @@
 # <1, 2, 0, 3>.  If the input is <3, 2, 1, 0>, return <>.
 
 
+# Note Dictionary Oredering is defined as:
+#   Define permuation p to appear before permutation q, if the first place
+#   where p and q differe in their array representations, starting from index 0
+#   the corresponding entry for p is less than that for q
+#   [2, 0, 1] < [2, 1, 0]
+
+# Note: see 'Compute Next Permutation.pdf' For More Information
+
+
 def next_permutation(perm):
     # Find the first entry from the right that is smaller than the entry
     # immediately after it
