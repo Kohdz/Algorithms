@@ -18,7 +18,7 @@ def next_permutation(perm):
     # perm[inversion_point]. Since entries in perm and decreasing after
     # inversion_point, if we search in reverse order , the first entry that is
     # greater than perm[inversion_point] is the entry to swap with
-    for i in reversed(range(inversion_point + 1), len(perm)):
+    for i in reversed(range(inversion_point + 1, len(perm))):
         if perm[i] > perm[inversion_point]:
             perm[inversion_point], perm[i] = perm[i], perm[inversion_point]
             break
@@ -28,5 +28,6 @@ def next_permutation(perm):
     perm[inversion_point + 1:] = reversed(perm[inversion_point + 1:])
     return perm
 
-perm = [1, 0, 3, 2] # <1, 2, 0, 3>. 
+
+perm = [1, 0, 3, 2]  # <1, 2, 0, 3>.
 print(next_permutation(perm))
