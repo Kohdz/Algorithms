@@ -13,6 +13,16 @@
 # Note: see 'Compute Next Permutation.pdf' For More Information
 
 
+# General Algorithm for computing the next permutation:
+# 	→ Find k such that p[k] < p[k + 1] and entries after index k appear in decreasing order
+# 	→ Find the smallest p[l] such that p[l] > p[k]
+# 		→ such an l must exist since p[k] < p[k + 1]
+# 	→ Swap p[l] and p[k]
+# 		→ note that the sequence after position k remains in decreasing order
+# 	→ Reverse the sequence after position k
+
+
+# time O (n) | space O (1)
 def next_permutation(perm):
     # Find the first entry from the right that is smaller than the entry
     # immediately after it
