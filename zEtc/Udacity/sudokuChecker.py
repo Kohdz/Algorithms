@@ -53,10 +53,10 @@ def check_sudoku(matrix):
         return True
 
 
-print("False: ", check_sudoku(incorrect))
-# >>> False
 print("True: ", check_sudoku(correct))
 # >>> True
+print("False: ", check_sudoku(incorrect))
+# >>> False
 
 print("False: ", check_sudoku(incorrect2))
 # # >>> False
