@@ -34,3 +34,4 @@
 #   - the last element points to nothing
 #   - adding elements or deleting is simply changing pointers
 #   - adding and removing elements are constant
+
