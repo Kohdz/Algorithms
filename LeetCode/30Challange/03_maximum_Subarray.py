@@ -1,4 +1,3 @@
-
 def maxSubArray(nums):
     if max(nums) < 0:
         return max(nums)
