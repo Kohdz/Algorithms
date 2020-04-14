@@ -44,8 +44,6 @@ def toSum2(nums, target):
     dict = {}
     for i in range(len(nums)):
         if target - nums[i] not in dict:
-            print("dict: ", dict)
             dict[nums[i]] = i
-            print("dict: ", dict)
         else:
             return [dict[target-nums[i]], i]
