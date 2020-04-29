@@ -32,6 +32,7 @@ def top_K_freq_keywords(keywords, reviews, k):
                 seen.add(word)
     candidates = [(-freq, word) for word, freq in review_freq.items()]
     heapq.heapify(candidates)
+    print(candidates)
     res = [heapq.heappop(candidates)[1] for _ in range(k)]
     return res
 
