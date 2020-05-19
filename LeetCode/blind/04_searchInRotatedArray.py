@@ -12,12 +12,7 @@ def search(nums, target):
 
 
         mid = (low + high) // 2
-            
-        print("nums[low]: ", nums[low])
-        print("nums[mid]: ", nums[mid])
-        print("nums[high]: ", nums[high])
-        print("")
-            
+   
         if target == nums[mid]:
             return mid
 
