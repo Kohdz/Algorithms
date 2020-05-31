@@ -46,4 +46,10 @@ graph1.add_edge(nodeH, nodeG)
 graph1.add_edge(nodeH, nodeP)
 graph1.add_edge(nodeS, nodeR)
 
-print(graph1)
+# To verify that the graph is created accurately.
+# Let's just print all the parent nodes and child nodes.
+for each in graph1.nodes:
+    print('parent node = ', each.val, end='\nchildren\n')
+    for each in each.children:
+        print(each.val, end=' ')
+    print('\n')
