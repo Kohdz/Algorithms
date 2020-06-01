@@ -1,40 +1,37 @@
 # https://leetcode.com/problems/pacific-atlantic-water-flow/
 
 
-def pacificAtlantic(matrix):
+def dfs(i, j, matrix, explored, prev):
+    m, n = len(matrix), len(matrix[0])
 
-    # Check for an empty graph.
+    if i < 0 or i >= m or j < 0 or j >= n or (i, j) in explored:
+        return
+
+    if matrix[i][j] < prev:
+        return
+
+    explored.add((i, j))
+    dfs(i-1, j, matrix, explored, matrix[i][j])  # up
+    dfs(i+1, j, matrix, explored, matrix[i][j])  # down
+    dfs(i, j-1, matrix, explored, matrix[i][j])  # left
+    dfs(i, j+1, matrix, explored, matrix[i][j])  # right
+
+
+def pacificAtlantic(matrix):
     if not matrix:
         return []
+    pacific, atlantic = set(), set()
+    m, n = len(matrix), len(matrix[0])
 
-    p_visited = set()
-    a_visited = set()
-    rows, cols = len(matrix), len(matrix[0])
-    directions = ((0, 1), (0, -1), (1, 0), (-1, 0))
+    for i in range(n):
+        dfs(0, i, matrix, pacific, -1)
+        dfs(m-1, i, matrix, atlantic, -1)
 
-    def traverse(i, j, visited):
-        if (i, j) in visited:
-            return
-        visited.add((i, j))
+    for i in range(m):
+        dfs(i, 0, matrix, pacific, -1)
+        dfs(i, n-1, matrix, atlantic, -1)
 
-        # Traverse neighbors.
-        for direction in directions:
-            next_i, next_j = i + direction[0], j + direction[1]
-            if 0 <= next_i < rows and 0 <= next_j < cols:
-
-                # Add in your question-specific checks.
-                if matrix[next_i][next_j] >= matrix[i][j]:
-                    traverse(next_i, next_j, visited)
-
-    for row in range(rows):
-        traverse(row, 0, p_visited)
-        traverse(row, cols - 1, a_visited)
-
-    for col in range(cols):
-        traverse(0, col, p_visited)
-        traverse(rows - 1, col, a_visited)
-
-    return list(p_visited & a_visited)
+    return list(pacific & atlantic)
 
 
 matrix = [[1, 2, 2, 3, 5],
