@@ -12,6 +12,7 @@ def lengthOfLongestSubstring(s):
     return length
 
 
+
 str1 = "abcabcbb"
 # Output: 3 
 
