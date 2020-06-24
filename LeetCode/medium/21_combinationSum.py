@@ -8,7 +8,7 @@ def combinationSum(candidates, target):
             return
 
         if sum(ans) == target:
-            res.append(ans[:])
+            res.append(ans)
             return
 
         for i in range(inx, len(candidates)):
