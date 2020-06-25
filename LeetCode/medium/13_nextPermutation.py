@@ -35,6 +35,7 @@ def nextPermutationnums(nums):
             nums[l], nums[r] = nums[r], nums[l]
             l +=1 ; r -= 1
 
+
 # EPI
 def nextPermutation(perm):
     """
@@ -58,5 +59,6 @@ def nextPermutation(perm):
     return perm
 
 
-perm = [1, 2, 3]  # 1, 3, 2
+perm =[1, 5, 8, 4, 7, 6, 5, 3,1]
+# 1, 5, 8, 5, 1, 3, 5, 6, 7
 print(nextPermutation(perm))
