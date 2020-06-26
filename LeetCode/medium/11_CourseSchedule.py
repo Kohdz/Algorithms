@@ -5,21 +5,34 @@ import collections
 
 
 def canFinish(numCourses, prerequisites):
-    graph = collections.defaultdict(set)
-    neighbors = collections.defaultdict(set)
-    for course, pre in prerequisites:
-        graph[course].add(pre)
-        neighbors[pre].add(course)
-    stack = [n for n in range(numCourses) if not graph[n]]
-    count = 0
-    while stack:
-        node = stack.pop()
-        count += 1
-        for n in neighbors[node]:
-            graph[n].remove(node)
-            if not graph[n]:
-                stack.append(n)
-    return count == numCourses
+        
+    graph = { n: [] for n in range(numCourses)}
+    marks = {n: 0 for n in range(numCourses)}
+        
+    for course, prereq in prerequisites:
+        graph[prereq].append(course)
+            
+    for node in range(numCourses):
+        if marks[node] == 0:
+            if not dfs(node, graph, marks):
+                return False
+                
+    return True
+    
+def dfs(node, graph, marks):
+        
+    marks[node] = 1
+        
+    for neighbor in graph[node]:
+        if marks[neighbor] == 0:
+            if not dfs(neighbor, graph, marks):
+                return False
+        elif marks[neighbor] == 1:
+            return False
+            
+            
+    marks[node] = 2
+    return True
 
 
 NumCourses = 2
