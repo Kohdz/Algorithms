@@ -1,7 +1,6 @@
 # https://leetcode.com/problems/course-schedule/
 # Topological Sort
 
-import collections
 
 
 def canFinish(numCourses, prerequisites):
