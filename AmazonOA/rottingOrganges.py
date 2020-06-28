@@ -3,7 +3,49 @@
 import collections
 
 
+import collections
+
+
 def orangesRotting(grid):
+        
+    queue = collections.deque([])
+    dirs = [(0, 1), (0, -1), (-1, 0), (1, 0)]
+    fresh = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+                
+            if grid[i][j] == 2:
+                queue.append((i, j))
+                
+            if grid[i][j] == 1:
+                fresh += 1
+     
+    minute = 0
+    visited = set()
+    while queue:
+
+        for _ in range(len(queue)):
+            i, j = queue.popleft()
+
+            for dx, dy in dirs:
+                nx, ny = dx + i, dy + j
+            
+                if 0 <= nx < len(grid) and 0 <= ny < len(grid[0]) and grid[nx][ny] == 1:
+
+                    if (nx, ny) not in visited:
+                        grid[nx][ny] = 2
+                        fresh -= 1
+                        queue.append((nx,ny))
+                        visited.add((nx,ny))
+        minute += 1
+          
+    if fresh == 0:
+        return max(0, minute -1)
+    else:
+        return -1
+
+
+def orangesRottingII(grid):
     n = len(grid)
     m = len(grid[0])
     count = 0
@@ -30,4 +72,4 @@ def orangesRotting(grid):
 
 grid = [[2, 1, 1], [1, 1, 0], [0, 1, 1]]
 
-print(orangesRotting(grid))
+print(orangesRottingII(grid))
