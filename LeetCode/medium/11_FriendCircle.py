@@ -17,13 +17,50 @@ def findCircleNum(M):
 
 def dfs(M, i, visited):
     visited.add(i)
-    for idx, val in enumerate(M[i]):
-        if val == 1 and idx not in visited:
-            dfs(M, idx, visited)
+    for nei, adj in enumerate(M[i]):
+        if adj == 1 and nei not in visited:
+            dfs(M, nei, visited)
+
+
+def findCircleNumII(M):
+
+    # visited array for each node in graph
+    visited= [False] * len(M)
+
+    # Number of friend circles/components
+    components = 0
+
+    # DFS traversal of each friend
+    for i in range(len(M)):
+
+        if visited[i] == False:
+
+            # increment component when non-visited friend is found
+            # after round of DFS
+
+            components += 1
+            dfsII(M, i, visited)
+    
+    return components
+
+
+def dfsII(M, i, visited):
+
+    # Mark the is node as visited
+    visited[i] = True
+
+    for j in range(len(M)):
+        
+        # If j is a friend fo i and j is not visited; visit j
+        if M[i][j] == 1 and visited[j] == False:
+            dfsII(M, j, visited)
+
+
+
 
 
 M = [[1, 1, 0],
      [1, 1, 0],
      [0, 0, 1]]
 
-print(findCircleNum(M))
+print(findCircleNumII(M))
