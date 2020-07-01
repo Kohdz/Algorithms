@@ -1,5 +1,15 @@
 # https://leetcode.com/problems/subsets/
 
+def subsetsCascading(nums):
+
+    n = len(nums)
+    output = [[]]
+
+    for num in nums:
+        output += [curr + [num] for curr in output]
+
+    return output
+
 
 def subsets(nums):
     def backtrack(first = 0, curr = []):
