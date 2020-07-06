@@ -8,6 +8,9 @@
 # is basically T(4) = T(3) + T(2) + T(1)
 #  we are caching information
 
+# For N equals 4 here are the recusive calls
+
+# (numTrees(0) * numTrees(3)) + (numTrees(1) * numTrees(2)) + (numTrees(2) * numTrees(1)) + (numTrees(3) * numTrees(0))
 
 # Time O(n^2) | Space O(n)
 
