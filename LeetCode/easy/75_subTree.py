@@ -39,6 +39,7 @@
 
 # Return false.
 
+
 def isMatch(s, t):
 
     if not(s and t):
@@ -58,3 +59,33 @@ def isSubtree(s, t):
         return False
 
     return isSubtree(s.left, t) or isSubtree(s.right, t)
+
+
+# -------------------------------------------------------------------------------
+# Iterative version
+
+def isSubtreeIter(s, t):
+
+    stack = [s]
+    while stack:
+        node = stack.pop()
+
+        if node.val == t.val and isMatchII(node, t):
+            return True
+        
+        if node.left:
+            stack.append(node.left)
+
+        if node.right:
+            stack.append(node.right)
+
+    return False
+
+def isMatchII(s, t):
+
+    if not(s and t):
+        return s is t
+
+    return (s.val == t.val and
+            isMatch(s.left, t.left) and
+            isMatch(s.right, t.right))
