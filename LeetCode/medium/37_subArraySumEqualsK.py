@@ -1,4 +1,10 @@
 # https://leetcode.com/problems/subarray-sum-equals-k/
+# https://www.youtube.com/watch?v=bqN9yB0vF08
+# https://www.youtube.com/watch?v=HbbYPQc-Oo4
+
+# store the culumative sums in a dictionary
+# if the difference between two culumaltive sums == target
+# then increase counter += 1
 
 import collections
 
