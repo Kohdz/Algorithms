@@ -2,6 +2,7 @@
 # https://www.youtube.com/watch?v=bqN9yB0vF08
 # https://www.youtube.com/watch?v=HbbYPQc-Oo4
 
+# culumative sum is also called the prefix sum
 # store the culumative sums in a dictionary
 # if the difference between two culumaltive sums == target
 # then increase counter += 1
