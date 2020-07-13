@@ -37,25 +37,37 @@ def verticalTraversalII(root):
     if not root:
         return []
 
+    # levels should be group all vertically alinged nodes
+    # i.e. {0: [(0, 3), (2, 15)], -1: [(1, 9)], 1: [(1, 20)], 2: [(2, 7)]})
     levels = collections.defaultdict(list)
     queue = [(root, 0, 0)]
 
     while queue:
-        n, x, y = queue.pop(0)
-        levels[x].append((y, n.val))
+        # work our way from distance 0,0 node to leaf nodes
+        node, x, y = queue.pop(0)
 
-        if n.left:
-            queue.append((n.left, x-1, y+1))
-        if n.right:
-            queue.append((n.right, x+1, y+1))
+        # we append vertical distance with the node value to the horizontal distance
+        levels[x].append((y, node.val))
 
-    res = []
+        if node.left:
+            # since we go left, subtract 1 to horziontal distance and add 1 to vertical distance
+            queue.append((node.left, x-1, y+1))
+        if node.right:
+            # since we go right, add one to horziontal  and also one to vertical distance
+            queue.append((node.right, x+1, y+1))
+
+    output = []
+    # find the left most x distance
     minL = min(levels.keys())
+    # find the right most x distance
     maxL = max(levels.keys())
 
-    for l in range(minL, maxL+1):
-        res.append([x for y, x in sorted(levels[l])])
-    return res
+    # loop through the left most node to the right most node
+    # append the left most node first, then the right node
+    # if two nodes are of same x ditance, use y distance to sort
+    for level in range(minL, maxL+1):
+        output.append([x for y, x in sorted(levels[level])])
+    return output
 
 
 
