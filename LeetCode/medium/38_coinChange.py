@@ -4,16 +4,16 @@
 # iterative bottom up
 def coinChange(coins, amount):
     
-    dp = [float('inf')] * (amount + 1)
+    cache = [float('inf')] * (amount + 1)
     
-    dp[0] = 0
+    cache[0] = 0
     
     for coin in coins:
-        for x in range(coin, amount + 1):
+        for i in range(coin, amount + 1):
             
-            dp[x] = min(dp[x], dp[x - coin] + 1)
+            cache[i] = min(cache[i], cache[i - coin] + 1)
     
-    return dp[amount] if dp[amount] != float('inf') else -1 
+    return cache[amount] if cache[amount] != float('inf') else -1 
 
 
 
