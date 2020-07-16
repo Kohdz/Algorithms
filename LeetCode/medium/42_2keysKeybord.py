@@ -19,6 +19,7 @@ def minSteps(n):
 
 def minStepsDP(n):
 
+     # dp[x] = minimum number of steps to get x A on screen
     # how to divide the number x?
     # x can be expressed as a*b
     # lets say b is always higher than a
