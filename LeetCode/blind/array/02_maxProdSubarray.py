@@ -2,19 +2,24 @@
 
 def maxProduct(nums):
         
-    max_prod, min_prod, ans = nums[0], nums[0], nums[0]
-        
+    if len(nums) == 0:
+        return
+
+    
+    max_so_far = min_so_far = result = nums[0]
+    
     for i in range(1, len(nums)):
-            
-        x = max(nums[i], max_prod*nums[i], min_prod*nums[i])
-            
-        y = min(nums[i], max_prod*nums[i], min_prod*nums[i])            
-            
-        max_prod, min_prod = x, y
-            
-        ans = max(max_prod, ans)
+        curr = nums[i]
+        temp_max = max(curr, max_so_far * curr, min_so_far * curr)
+        min_so_far = min(curr, max_so_far * curr, min_so_far * curr)
+
+        max_so_far = temp_max
+
+        result = max(max_so_far, result)
+
+    return result
         
-    return ans
+
 
 
 # Input: [2,3,-2,4]
