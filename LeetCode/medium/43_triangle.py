@@ -49,7 +49,7 @@ def minimumTotalBottomUpII(triangle):
 def minimumTotalBottomUpIII(triangle):
     for i in reversed(range(len(triangle)-1)):
     
-        for j, val in enumerate(triangle[i]):
+        for j in range(len(triangle[i])):
             
             triangle[i][j] = min(triangle[i][j] + triangle[i+1][j], triangle[i][j] + triangle[i+1][j+1])
         
@@ -62,4 +62,4 @@ triangle = [
           [4,1,8,3]
 ]
 
-print(minimumTotalBottomUp(triangle))
+print(minimumTotalBottomUpIII(triangle))
