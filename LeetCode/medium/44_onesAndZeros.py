@@ -5,6 +5,7 @@
 # https://snowan.gitbook.io/study-notes/leetcode/english-solution/474.ones-and-zeros-en
 # This is a multi-dimensional cost 0-1 knapsack problem with two backpack sizes, 0 number and 1 number.
 
+# https://stackoverflow.com/questions/62981030/multi-dimensional-cost-0-1-knapsack-problem-with-two-backpack-sizes
 
 def findMaxForm(strs, m, n):
     # we are traversing reverse to prevent subproblems from overlapping
