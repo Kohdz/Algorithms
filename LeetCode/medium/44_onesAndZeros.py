@@ -9,7 +9,7 @@
 def findMaxForm(strs, m, n):
     # we are traversing reverse to prevent subproblems from overlapping
     # consider string "01" and m = 5, n = 3 and draw the matrix from normal
-    # order and in reverse order, you'll understand
+    #order and in reverse order, you'll understand
     
     # the lower limit is number of zeros and ones, because before that you wont find match
     dp = [[0] * (n + 1) for _ in range(m +1)]
