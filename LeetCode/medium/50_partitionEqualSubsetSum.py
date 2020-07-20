@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/partition-equal-subset-sum/
+# https://leetcode.com/problems/partition-equal-subset-sum/discuss/466809/How-to-map-to-the-O1-Knapsack-DP-Problem
 # https://leetcode.com/problems/partition-equal-subset-sum/discuss/462699/Whiteboard-Editorial.-All-Approaches-explained.
-
 
 def canPartition(A):
     
