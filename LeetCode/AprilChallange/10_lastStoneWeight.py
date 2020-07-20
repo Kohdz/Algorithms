@@ -16,7 +16,7 @@ import heapq
 # Time O(NlogN)
 # Space O(N)
 
-def lastStoneWeightJeap(A):
+def lastStoneWeightHeap(stones):
     # sign-flip
     for i in range( len(stones) ):
         stones[i] *= -1
@@ -46,7 +46,7 @@ def lastStoneWeightRec(stones):
     return lastStoneWeightRec([stones.pop() - stones.pop()] + stones)
 
 # pop and compare
-def lastStoneWeightSortPop(stones)
+def lastStoneWeightSortPop(stones):
     while len(stones)>1:
         stones.sort()
         m1=stones.pop()
@@ -54,3 +54,9 @@ def lastStoneWeightSortPop(stones)
         if m1 != m2:
             stones.append(abs(m1-m2))         
     return stones[0] if stones else 0
+
+
+A = [2,7,4,1,8,1]
+# output 1
+
+print(lastStoneWeightJeap(A))
