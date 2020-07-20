@@ -59,4 +59,4 @@ def lastStoneWeightSortPop(stones):
 A = [2,7,4,1,8,1]
 # output 1
 
-print(lastStoneWeightJeap(A))
+print(lastStoneWeightHeap(A))
