@@ -24,7 +24,7 @@ def maxProfitPeakValley(prices):
     
     i = 0
     price_len = len(prices) - 1
-    vally = prices[0]
+    valley = prices[0]
     peak = prices[0]
     max_profit= 0
     
