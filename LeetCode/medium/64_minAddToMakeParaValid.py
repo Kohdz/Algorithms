@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/
 
 def minAddToMakeValid(S):
-    # Time | Space
+    # Time O(n) | Space O (n)
     '''
     - if the current bracket is ) there has to be a previous opening bracket (
     - for the sequence to be balanced. If not then increment the counter unbalanced
