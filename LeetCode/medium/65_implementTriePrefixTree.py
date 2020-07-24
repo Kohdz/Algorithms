@@ -62,3 +62,41 @@ print(trie.search("app"))
 print(trie.startsWith("app"))
 print(trie.insert("app"))
 print(trie.search("app"))
+
+
+#################################################################################################################
+# Array Version
+class NodeII:
+    def __init__(self):
+        self.children = [None]*26
+        self.isLeaf = False
+    
+class TrieII:
+
+    def __init__(self):
+        self.root = NodeII()
+
+    def insert(self, word: str) -> None:
+        cur = self.root
+        for c in word:
+            i = ord(c) - ord('a')
+            if not cur.children[i]:
+                cur.children[i] = NodeII()
+            cur = cur.children[i]
+        cur.isLeaf = True
+
+    def search(self, word: str) -> bool:
+        end = self.findPrefixEnd(word)
+        return end and end.isLeaf
+
+    def startsWith(self, prefix: str) -> bool:
+        return bool(self.findPrefixEnd(prefix))  
+        
+    def findPrefixEnd(self, prefix: str) -> NodeII:
+        cur = self.root
+        for c in prefix:
+            i = ord(c) - ord('a')
+            if not cur.children[i]:
+                return None
+            cur = cur.children[i]
+        return cur
