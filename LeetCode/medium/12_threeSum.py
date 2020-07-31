@@ -1,24 +1,18 @@
+# https://leetcode.com/problems/3sum/
 
-def threeSumTarget(nums, target):
-    nums.sort()
 
-    for i in range(len(nums)-2):
+# For time complexity
+# Sorting takes `O(NlogN)`
+# Now, we need to think as if the `nums` is really really big
+# We iterate through the `nums` once, and each time we iterate the whole array again by a while loop
+# So it is `O(NlogN+N^2)~=O(N^2)`
 
-        partial_target = target - nums[i]
-        j = i + 1
-        k = len(nums) - 1
+# For space complexity
+# We didn't use extra space except the `res`
+# Since we may store the whole 'nums' in it
+# So it is `O(N)`
+# `N` is the length of `nums`
 
-        while j < k:
-
-            partial_sum = nums[j] + nums[k]
-
-            if partial_sum == partial_target:
-                return (nums[i], nums[j], nums[k])
-            elif partial_sum > partial_target:
-                k -= 1
-            else:
-                j += 1
-        return None
 
 
 def threeSum(nums):
