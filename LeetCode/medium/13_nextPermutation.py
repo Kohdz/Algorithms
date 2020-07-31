@@ -1,6 +1,9 @@
 # https://leetcode.com/problems/next-permutation
 
 
+
+
+
 def nextPermutationnums(nums):
         """
         Do not return anything, modify nums in-place instead.
