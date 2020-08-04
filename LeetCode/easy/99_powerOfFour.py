@@ -32,7 +32,21 @@ def isPowerOfFourBitCheck(n):
     # we know n & (n -1 ) == 0 for powers of two
     # infact we can use it to get the set bits
     # we also know that n % 3 == 1 for powers of 4 
+    
+    # return num & num - 1 == 0 and (num - 1) % 3 == 0
     return (n > 0 and ((n & (n-1)) == 0) and (n % 3 == 1))
+
+
+def isPowerOfFourWhileLoop(num):
+        """
+        :type num: int
+        :rtype: bool
+        """
+        if num <= 0:
+            return False
+        while num%4 == 0:
+            num /= 4
+        return num == 1
 
 n = 16
 print(isPowerOfFourBitCheck(n))
