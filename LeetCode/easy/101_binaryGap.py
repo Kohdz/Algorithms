@@ -3,6 +3,7 @@
 
 def binaryGap(N):
 
+    # Time O(log n)  | Space O (1 )
     curr, prev = 0, -1
     max_gap = 0 
     
