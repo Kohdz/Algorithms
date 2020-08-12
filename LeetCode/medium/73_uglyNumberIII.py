@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/ugly-number-iii/
 # https://leetcode.com/problems/ugly-number-iii/discuss/719717/Python-Binary-SearchMath.-Easy-Understand
+# https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems
 
 # Total number of multiple on a=2, b=3, c=5, from 1 to k = 50
 # = ( k // 2 + k // 3 + k // 5 ) - ( k // lcm(2,3) - k // lcm(2, 5) - k // lcm(3, 5) ) + k // lcm( 2, 3, 5 )
