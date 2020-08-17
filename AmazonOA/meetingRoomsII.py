@@ -1,21 +1,24 @@
-# Meeting Rooms I, II
-# Question 1
+# https://leetcode.com/problems/meeting-rooms-ii/
 
-# Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), determine if a person could attend all meetings.
+'''
+Meeting Rooms I, II
+Question 1
 
-# For example,
+Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), determine if a person could attend all meetings.
 
-# Given [[0, 30],[5, 10],[15, 20]],
-# return false.
+For example,
 
-# Solution
+Given [[0, 30],[5, 10],[15, 20]],
+return false.
 
-# The idea is pretty simple: first we sort the intervals in the ascending order of start; then we check for the overlapping of each pair of neighboring intervals. If they do, then return false; after we finish all the checks and have not returned false, just return true.
+Solution
 
-# Sorting takes O(nlogn) time and the overlapping checks take O(n) time, so this idea is O(nlogn) time in total.
+The idea is pretty simple: first we sort the intervals in the ascending order of start; then we check for the overlapping of each pair of neighboring intervals. If they do, then return false; after we finish all the checks and have not returned false, just return true.
 
-# The code is as follows.
+Sorting takes O(nlogn) time and the overlapping checks take O(n) time, so this idea is O(nlogn) time in total.
 
+The code is as follows.
+'''
 
 def meeting_room(intervals):
 
