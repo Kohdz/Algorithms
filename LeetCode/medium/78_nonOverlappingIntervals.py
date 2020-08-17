@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/non-overlapping-intervals/
-
+# https://www.youtube.com/watch?v=BTObFnHbD4U
 
 # The heuristic is: always pick the interval with the earliest end time. Then you can
 #  get the maximal number of non-overlapping intervals. (or minimal number to remove).
