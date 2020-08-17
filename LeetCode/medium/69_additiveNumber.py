@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/additive-number
 
-# Time O(2^n) | Space O(2^n)
+# Time O(2^n) | Space O(2^n )
 def find_rec(n1, n2, s, found):
     if s == "" and found:
         return True
