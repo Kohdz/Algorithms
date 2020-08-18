@@ -2,22 +2,16 @@
 
 '''
 Meeting Rooms I, II
-Question 1
+Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],…] (si < ei), 
+find the minimum number of conference rooms required.
 
-Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), determine if a person could attend all meetings.
+Example 1:
+Input: [[0, 30],[5, 10],[15, 20]]
+Output: 2
 
-For example,
-
-Given [[0, 30],[5, 10],[15, 20]],
-return false.
-
-Solution
-
-The idea is pretty simple: first we sort the intervals in the ascending order of start; then we check for the overlapping of each pair of neighboring intervals. If they do, then return false; after we finish all the checks and have not returned false, just return true.
-
-Sorting takes O(nlogn) time and the overlapping checks take O(n) time, so this idea is O(nlogn) time in total.
-
-The code is as follows.
+Example 2:
+Input: [[7,10],[2,4]]
+Output: 1
 '''
 
 def meeting_room(intervals):
@@ -42,3 +36,8 @@ def meeting_room(intervals):
             end_i += 1
 
     return rooms
+
+
+intervals =  [[0, 30],[5, 10],[15, 20]]
+# return false
+print(meeting_room(intervals))
