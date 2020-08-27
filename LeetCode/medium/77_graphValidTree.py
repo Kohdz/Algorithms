@@ -9,6 +9,9 @@ Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]], return false.
 Note: you can assume that no duplicate edges will appear in edges. Since all edges are undirected, [0, 1] is the same as [1, 0]and thus will not appear together in edges.
 
 Analysis: This problem can be converted to finding the cycle from a graph. It can be solved by using DFS (Recursion) or BFS (Queue).
+
+Note there are multiple ways to do this, DFS recursive, DFS Iteratively and BFS
+    - the DFS iteratively is litteraly the same as BFS; except you use stack and not deque
 '''
 
 # make sure graph has no cycles
@@ -25,6 +28,7 @@ def validTreeBFS(n, edges):
         return False
 
     # init node's neighbors in dict
+    # undirected, so we have to add both u to v and v to u
     neighbors = collections.defaultdict(list)
     for u, v in edges:
         neighbors[u].append(v)
@@ -41,35 +45,68 @@ def validTreeBFS(n, edges):
                 visited[node] = True
                 queue.append(node)
 
+    # checks condition 2, that all components are connected
     return len(visited) == n
 
-def validTreeDFS(n, edges):
+def validTreeDFSRec(n, edges):
 
-    def helper(curr_node, parent, neighbors, visited):
-        if visited[curr_node]:
-            return False
-        visited[curr_node] = True
-        
-        for nei in neighbors[curr_node]:
-            if nei != parent and not helper(nei, curr_node, neighbors, visited):
-                return False
-        return True
-
-    neighbors = collections.defaultdict(list)
-    for u, v in edges:
-        neighbors[u].append(v)
-        neighbors[v].append(u)
-    visited = [False] * n
-    if not helper(0, -1, neighbors, visited):
+    # checks for cycle
+    if len(edges) != n - 1:
         return False
-    
-    for vertex in visited:
-        if not vertex:
-            return False
 
-    return True
+    graph = collections.defaultdict(list)
+
+    for u, v in edges:
+        graph[u].append(v)
+        graph[v].append(u)
+
+
+    def dfs(node):
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                dfs(neighbor)
+
+    visited = set()
+    visited.add(0)
+    dfs(0)
+
+    return len(visited) == n
+
+
+
+def validTreeDFSIterative(n, edges):
+
+    if len(edges) != n - 1:
+        return False
+
+    graph = collections.defaultdict(list)
+
+    for u, v in edges:
+        graph[u].append(v)
+        graph[v].append(u)
+        
+    visited = set()
+    visited.add(0)
+
+    stack = [0]
+
+    while stack:
+        node = stack.pop()
+
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                stack.append(neighbor)
+
+    return len(visited) == n
+
+
 
 def validTreeUnion(n, edges):
+    # union should mean every x and y has different parent
+    # two roots with same value means cycle
+
         def find(edges, i):
             while i != edges[i]:
                 i = edges[i]
@@ -101,8 +138,8 @@ assert validTreeBFS(5, [[0, 1], [0, 2], [0, 3], [1, 4]]) == True
 assert validTreeBFS(5, [[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]]) == False
 
 # DFS
-assert validTreeDFS(5, [[0, 1], [0, 2], [0, 3], [1, 4]]) == True
-assert validTreeDFS(5, [[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]]) == False
+assert validTreeDFSIterative(5, [[0, 1], [0, 2], [0, 3], [1, 4]]) == True
+assert validTreeDFSIterative(5, [[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]]) == False
 
 # Union
 assert validTreeUnion(5, [[0, 1], [0, 2], [0, 3], [1, 4]]) == True
