@@ -11,8 +11,17 @@ Output: false
 Input: [[7,10],[2,4]]
 Output: true
 '''
+def meetingRooms(intervals):
 
-def AttendMeeting(times):
+    intervals.sort()
+
+    for i in range(1, len(intervals)):
+        if intervals[i-1][1] > intervals[i][0]:
+            return False
+
+    return True
+
+def AttendMeetingEarly(times):
     start = []
     end = []
     for i in range(len(times)):
@@ -35,8 +44,8 @@ time2 = [[7,10],[2,4]]
 # Output: true
 
 
-if AttendMeeting(time1) == False:
+if meetingRooms(time1) == False:
     print("Test 1 Passed")
 
-if AttendMeeting(time2) == True:
+if meetingRooms(time2) == True:
     print("Test 2 Passed")
