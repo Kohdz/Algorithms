@@ -13,7 +13,7 @@ def cloneGraphBFS(node):
     if not node:
         return
     
-    queue = collections.defaultdictdeque([node])
+    queue = collections.deque([node])
     visited = {}
     
     clone_node = Node(node.val)
