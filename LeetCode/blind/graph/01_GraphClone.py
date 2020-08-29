@@ -9,36 +9,44 @@ class Node:
         self.neighbors = neighbors if neighbors is not None else []
 
 
-def cloneGraphDFS(node):
-    dic = {}
-
-    def dfs(node):
-        if not node:
-            return
-        else:
-            node_copy = Node(node.val, [])
-            dic[node] = node_copy
-            for nei in node.neighbors:
-                if nei in dic:
-                    node_copy.neighbors.append(dic[nei])
-                else:
-                    node_copy.neighbors.append(dfs(nei))
-            return node_copy
-    return dfs(node)
-
-
 def cloneGraphBFS(node):
     if not node:
-        return node
-    q = collections.deque([node])
+        return
+    
+    queue = collections.defaultdictdeque([node])
     visited = {}
-    visited[node] = Node(node.val, [])
+    
+    clone_node = Node(node.val)
+    visited[clone_node.val] = clone_node
 
-    while q:
-        n = q.popleft()
-        for neighbor in n.neighbors:
-            if neighbor not in visited:
-                visited[neighbor] = Node(neighbor.val, [])
-                q.append(neighbor)
-            visited[n].neighbors.append(visited[neighbor])
-    return visited[node]
+    while queue:
+        curr_node = queue.popleft()
+        
+        for nei in curr_node.neighbors:
+            if nei.val not in visited:
+                new_node = Node(nei.val)
+                visited[nei.val] = new_node
+                queue.append(nei)
+            visited[curr_node.val].neighbors.append(visited[nei.val])
+                
+    return clone_node
+
+
+def cloneGraphDFS(node):
+    if not node:
+        return
+
+    def dfs(node):
+        for nei in node.neighbors:
+            if nei.val not in visited:
+                new_node = Node(nei.val)
+                visited[nei.val] = new_node
+                dfs(nei)
+            visited[node.val].neighbors.append(visited[nei.val])
+    
+    visited = {}
+    node_copy = Node(node.val)
+    visited[node_copy.val] = node_copy
+    dfs(node)
+    return node_copy
+
