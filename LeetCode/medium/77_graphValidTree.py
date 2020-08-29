@@ -29,21 +29,24 @@ def validTreeBFS(n, edges):
 
     # init node's neighbors in dict
     # undirected, so we have to add both u to v and v to u
-    neighbors = collections.defaultdict(list)
+    # from edges you are creating an adjaceny list
+    graph = collections.defaultdict(list)
+
     for u, v in edges:
-        neighbors[u].append(v)
-        neighbors[v].append(u)
+        graph[u].append(v)
+        graph[v].append(u)
 
     # BFS to check whether the graph is valid tree
-    visited = {}
+    visited = set()
     queue = collections.deque([0])
+
     while queue:
         curr_node = queue.popleft()
-        visited[curr_node] = True
-        for node in neighbors[curr_node]:
-            if node not in visited:
-                visited[node] = True
-                queue.append(node)
+        visited.add(curr_node)
+        for nei in graph[curr_node]:
+            if nei not in visited:
+                visited.add(nei)
+                queue.append(nei)
 
     # checks condition 2, that all components are connected
     return len(visited) == n
