@@ -24,6 +24,12 @@ Input:
 Ouput:
 [1, 3, 4, 2]
 
+Explanation:
+The root doesn't have left subtree, so the root itself is left boundary.
+The leaves are node 3 and 4.
+The right boundary are node 1,2,4. Note the anti-clockwise direction means you should output reversed right boundary.
+So order them in anti-clockwise without duplicates and we have [1,3,4,2].
+
 Example 2
 Input:
      ______ 1 _______
@@ -37,11 +43,11 @@ Input:
 Output:
 [1, 2, 4, 7, 8, 9, 10, 6, 3]
 
-Explanation:
-The root doesn't have left subtree, so the root itself is left boundary.
-The leaves are node 3 and 4.
-The right boundary are node 1,2,4. Note the anti-clockwise direction means you should output reversed right boundary.
-So order them in anti-clockwise without duplicates and we have [1,3,4,2].
+
+# Explanation:
+    - we need to go around the tree collecting the left and right nodes 
+    - some nodes might not be on the right or left side, but may have leaf nodes
+    - for example, 5 will not be 
 '''
 
 # Definition for a Node.
