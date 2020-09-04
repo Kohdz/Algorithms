@@ -9,7 +9,9 @@ def findRedundantConnection(edges):
         if source not in seen:
             seen.add(source)
             if source == target: return True
-            return any(dfs(nei, target) for nei in graph[source])
+            for nei in graph[source]:
+                if dfs(nei, target):
+                    return True
 
     for u, v in edges:
         seen = set()
