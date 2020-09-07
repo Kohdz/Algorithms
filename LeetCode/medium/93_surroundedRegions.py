@@ -11,13 +11,18 @@ def solve(board):
     rows = len(board)
     cols = len(board[0]) 
     
-    # rescue remaining 'O' cells from other 'O' cells on the border
     for i in range(rows):
+        # left column 
         dfs(board, i, 0, rows, cols)
+
+        # right column
         dfs(board, i, cols - 1, rows, cols)
         
     for j in range(cols):
+        # top column
         dfs(board, 0, j, rows, cols)
+
+        # bottom column
         dfs(board, rows - 1, j, rows, cols)
         
     # update the cells
