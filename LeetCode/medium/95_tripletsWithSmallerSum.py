@@ -33,8 +33,13 @@ def tripletsSmallerSum(arr, target):
             if _sum < target:
 
                 # since arr[right] >= arr[left], therefore we can replace arr[right] by any number
-                # between left and right to get a sum less that the target 
+                # between left and right to get a sum less that the target  
                 output += right - left
+                
+                # return list of nums an dnot count
+                # for j in range(right, left - 1):
+                #     output.append([arr[i], arr[left], arr[right]])
+                
                 left += 1
             else:
                 # we need a pair with a smaller sum
