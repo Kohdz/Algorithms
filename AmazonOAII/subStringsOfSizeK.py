@@ -9,7 +9,7 @@ def slidWindow(word, K):
         return ""
 
     left = 0
-    output = []
+    output = [] # also try set()
     counter = Counter()
 
     for right in range(len(word)):
