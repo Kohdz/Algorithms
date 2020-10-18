@@ -38,36 +38,33 @@ def getNearestCities(numOfCities, cities, xCoordinates, yCoordinates, numofQueri
 # print(getNearestCities( ["c1", "c2", "c3"], [3,2,1],[3,2,3],["c1", "c2", "c3"]))
 
 
-def findNeighbor(query):
-    # finding city info
-    city_index = cities.index(query)
-    x_city = x_c[city_index]
-    y_city = y_c[city_index]
-
-    # finding neighbors and minDist neighbor
-    minDist = float('inf')
-    nearest = None
-    for i in range(len(cities)):
-        if cities[i] != query:
-            if x_c[i] == x_city or y_c[i] == y_city:
-                dist = abs(x_c[i]-x_city) + abs(y_c[i] - y_city)
-                if dist < minDist:
-                    minDist = dist
-                    nearest = cities[i]
-                elif dist == minDist:
-                    if cities[i] < nearest:
-                        nearest = cities[i]
-    return nearest
-
-# processing queries one at a time
 
 
 def process(queries):
-    res = []
+    
+    nearNeighbors = []
     for query in queries:
-        ans = findNeighbor(query)
-        res.append(ans)
-    return res
+            
+        # finding city info
+        city_index = cities.index(query)
+        x_city = x_c[city_index]
+        y_city = y_c[city_index]
+
+        # finding neighbors and minDist neighbor
+        minimum_distance = float('inf')
+        nearest_city = None
+        for i in range(len(cities)):
+            if cities[i] != query:
+                if x_c[i] == x_city or y_c[i] == y_city:
+                    dist = abs(x_c[i]-x_city) + abs(y_c[i] - y_city)
+                    if dist < minimum_distance:
+                        minimum_distance = dist
+                        nearest_city = cities[i]
+                    elif dist == minimum_distance:
+                        if cities[i] < nearest_city:
+                            nearest_city = cities[i]
+        nearNeighbors.append(nearest_city)
+    return nearNeighbors
 
 
 numOfCities = 3
