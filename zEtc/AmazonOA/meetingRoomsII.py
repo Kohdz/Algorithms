@@ -37,7 +37,6 @@ def meeting_room(intervals):
 
     return rooms
 
-
 intervals =  [[0, 30],[5, 10],[15, 20]]
 # return false
 print(meeting_room(intervals))
