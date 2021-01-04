@@ -23,7 +23,8 @@ Note there are multiple ways to do this, DFS recursive, DFS Iteratively and BFS
 import collections
 
 def validTreeBFS(n, edges):
-
+    
+    # checks for cycle
     if len(edges) != n - 1:
         return False
 
