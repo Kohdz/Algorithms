@@ -75,6 +75,9 @@ class UnionFind:
         root_x = self.find(x)
         root_y = self.find(y)
 
+        if root_x == root_y:
+            return False
+
         if root_x != root_y:
             if self.rank[root_x] > self.rank[root_y]:
                 self.root[root_y] = root_x
@@ -84,6 +87,8 @@ class UnionFind:
                 self.root[root_y] = root_x
                 self.rank[root_x] += 1
 
+        return True
+
 
 def connected_union(n, edges):
     components = n
@@ -91,7 +96,7 @@ def connected_union(n, edges):
 
     for u, v in edges:
         if uf.union(u, v):
-            components -= 1
+            components -= 1   
 
     return components
 
